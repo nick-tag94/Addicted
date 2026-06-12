@@ -223,18 +223,6 @@ export default defineConfig(({ command }) => {
               },
             },
           },
-          {
-            filename: "basket",
-            template: "basket.html",
-            injectOptions: {
-              data: {
-                title: "Addicted - Корзина",
-                assetBase: basePath,
-                header: sharedComponentTokens.header,
-                footer: sharedComponentTokens.footer,
-              },
-            },
-          },
         ],
       }),
     ],
