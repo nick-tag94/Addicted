@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <section class="search_page">
+            <div class="container">
+                <div class="search_page_wrap row">
+                    <div class="col-xl-6 col-md-8">
+                        <h1 class="search_page_wrap_title">Поиск по каталогу</h1>
+                        <form action="/search/" method="get" class="search_page_wrap_form">
+                            <input placeholder="Поиск" class="search_page_wrap_form-input" type="text" name="q" value=""
+                                size="50">
+                            <button type="submit" class="search_page_wrap_form-submit" aria-label="Искать"
+                                title="Искать">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <path
+                                        d="M0 6.01562C0 5.76041 0 5.50521 0 5.25C0.0354424 5.01749 0.0652008 4.78393 0.107212 4.55261C0.499366 2.39332 2.26761 0.580046 4.41711 0.136925C4.70119 0.0783622 4.99047 0.0450219 5.27734 0C5.52344 0 5.76953 0 6.01562 0C6.05035 0.008288 6.08474 0.0185213 6.11985 0.0245581C6.42889 0.0776853 6.74359 0.108449 7.04633 0.18597C10.5473 1.08245 12.3046 5.04888 10.6169 8.24342C10.4624 8.53589 10.2739 8.81038 10.0845 9.12065C10.1138 9.14287 10.1621 9.17122 10.2004 9.20955C11.3385 10.346 12.4747 11.4844 13.614 12.6196C13.7726 12.7775 13.9257 12.9353 14 13.1523C14 13.2435 14 13.3347 14 13.4258C13.9148 13.7234 13.722 13.9135 13.4258 14C13.3438 14 13.2618 14 13.1797 14C12.9698 13.9436 12.8156 13.8081 12.6656 13.6575C11.5084 12.4955 10.3477 11.3369 9.18785 10.1774C9.15635 10.1459 9.12292 10.1163 9.09475 10.0899C9.0804 10.0927 9.07506 10.0923 9.07156 10.0947C9.05266 10.1072 9.03394 10.1201 9.01556 10.1335C7.68027 11.1066 6.20051 11.4537 4.57241 11.16C2.39608 10.7675 0.586297 9.01145 0.13625 6.84895C0.078953 6.57365 0.0448483 6.29352 0 6.01562ZM1.3956 5.62077C1.38673 7.94747 3.28245 9.85302 5.62035 9.86746C7.94682 9.88181 9.85784 7.98255 9.86807 5.64581C9.87831 3.31538 7.98199 1.4085 5.64532 1.39956C3.31732 1.39065 1.40449 3.29065 1.3956 5.62077Z"
+                                        fill="#000" />
+                                </svg>
+                            </button>
+                            <input type="hidden" name="how" value="r">
+                        </form>
+                        <div class="search_page_wrap_state">
+                            <div class="search_page_wrap_state_title">
+                                Введите запрос, чтобы начать поиск
+                            </div>
+                            <div class="search_page_wrap_state_text">
+                                Например: джемпер, кардиган, пальто или цвет изделия
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-12">
+                        <div class="search_page_wrap_content">
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-8.jpg" alt="Синий трикотажный топ"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Синий трикотажный топ</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">12 900 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-9.jpg" alt="Хлопковый вязаный комплект"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Хлопковый вязаный комплект</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">21 500 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-10.jpg" alt="Джемпер Breton" width="607"
+                                        height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Джемпер Breton</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">26 400 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-11.jpg" alt="Белая хлопковая майка"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Белая хлопковая майка</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">9 800 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <div class="product_card_media_badge">Sale</div>
+                                    <img src="img/catalog-page/catalog_card-12.jpg" alt="Леопардовый джемпер Distressed"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Леопардовый джемпер Distressed</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">25 900 ₽</span>
+                                        <span class="product_card_content_prices_price old">31 600 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <div class="product_card_media_badge">Sale</div>
+                                    <img src="img/catalog-page/catalog_card-13.jpg" alt="Серый джемпер Distressed"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Серый джемпер Distressed</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">24 700 ₽</span>
+                                        <span class="product_card_content_prices_price old">29 900 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-14.jpg" alt="Свитшот-поло Graphite"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Свитшот-поло Graphite</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">19 400 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="product_card">
+                                <div class="product_card_media">
+                                    <img src="img/catalog-page/catalog_card-15.jpg" alt="Костюм с контрастной отделкой"
+                                        width="607" height="806" loading="lazy">
+                                </div>
+                                <div class="product_card_content">
+                                    <h3 class="product_card_content_title">Костюм с контрастной отделкой</h3>
+                                    <div class="product_card_content_prices">
+                                        <span class="product_card_content_prices_price">32 800 ₽</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <%- footer %>

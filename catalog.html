@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <title><%- title %></title>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+  <%- header %>
+
+    <section class="catalog_page">
+      <div class="container">
+        <div class="catalog_page_wrap">
+          <div class="catalog_page_wrap_head">
+            <h1 class="catalog_page_wrap_head_title">Каталог</h1>
+            <div class="catalog_page_wrap_head_form">
+              <div class="catalog_page_wrap_head_form_action">
+                <button type="button" class="catalog_page_wrap_head_form_action-btn data-open-modal"
+                  data-modal="cart_modal">
+                  <span class="catalog_page_wrap_head_form_action-btn_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M3 5H18M5.5 10H15.5M8.5 15H12.5" stroke="#000" stroke-width="0.75" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </span>
+                  Фильтр <span class="catalog_page_wrap_head_form_action-btn_count" data-catalog-filter-count></span>
+                </button>
+                <button type="button" class="catalog_page_wrap_head_form_action-reset" data-catalog-filter-reset>
+                  <span class="catalog_page_wrap_head_form_action-reset_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path
+                        d="M10 10.6948L4.85182 15.843C4.76022 15.9346 4.64769 15.9836 4.51423 15.9902C4.38077 15.9967 4.26169 15.9477 4.15702 15.843C4.05234 15.7383 4 15.6225 4 15.4956C4 15.3687 4.05234 15.2529 4.15702 15.1482L9.3052 10L4.15702 4.85182C4.06542 4.76022 4.01636 4.64769 4.00981 4.51423C4.00327 4.38077 4.05234 4.26169 4.15702 4.15702C4.26169 4.05234 4.37749 4 4.50442 4C4.63134 4 4.74714 4.05234 4.85182 4.15702L10 9.3052L15.1482 4.15702C15.2398 4.06542 15.3526 4.01636 15.4868 4.00981C15.6196 4.00327 15.7383 4.05234 15.843 4.15702C15.9477 4.26169 16 4.37749 16 4.50442C16 4.63134 15.9477 4.74714 15.843 4.85182L10.6948 10L15.843 15.1482C15.9346 15.2398 15.9836 15.3526 15.9902 15.4868C15.9967 15.6196 15.9477 15.7383 15.843 15.843C15.7383 15.9477 15.6225 16 15.4956 16C15.3687 16 15.2529 15.9477 15.1482 15.843L10 10.6948Z"
+                        fill="#979797" />
+                    </svg>
+                  </span>
+                  Сбросить фильтры
+                </button>
+              </div>
+              <form action="" method="get" class="catalog_page_wrap_head_form_sort">
+                <select name="sort" class="js-select2" data-selection-class="catalog_filter_sort_selection"
+                  data-dropdown-class="catalog_filter_sort_dropdown"
+                  data-dropdown-parent=".catalog_page_wrap_head_form_sort">
+                  <option value="popular" selected>по популярности</option>
+                  <option value="price">по цене</option>
+                  <option value="discount">по скидке</option>
+                  <option value="new">по новизне</option>
+                </select>
+              </form>
+            </div>
+            <div class="catalog_page_wrap_head_filters swiper" data-catalog-filter-chips>
+              <div class="swiper-wrapper">
+              </div>
+            </div>
+          </div>
+          <div class="catalog_page_wrap_content">
+            <div class="catalog_page_wrap_content_loader" aria-hidden="true">
+              <span class="catalog_page_wrap_content_loader_spinner">Loading...</span>
+            </div>
+            <div class="catalog_page_wrap_content_block is-line">
+              <div class="catalog_page_wrap_content_block_left">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-1.jpg" alt="Черный джемпер с пайетками" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Черный джемпер с пайетками</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">29 800 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <div class="product_card_media_badge">Sale</div>
+                    <img src="img/catalog-page/catalog_card-2.jpg" alt="Вязаная сумка Verde" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Вязаная сумка Verde</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">11 900 ₽</span>
+                      <span class="product_card_content_prices_price old">15 400 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-3.jpg" alt="Поло в полоску Cacao" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Поло в полоску Cacao</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">18 600 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-4.jpg" alt="Ажурный хлопковый костюм" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Ажурный хлопковый костюм</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">24 900 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_page_wrap_content_block_right">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <div class="product_card_media_badge">Sale</div>
+                    <img src="img/catalog-page/catalog_card-5.jpg" alt="Дубленка Heritage" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Дубленка Heritage</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">96 500 ₽</span>
+                      <span class="product_card_content_prices_price old">118 000 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog_page_wrap_content_block is-complect">
+              <div class="catalog_page_wrap_content_block_left">
+                <div class="product_gallery">
+                  <img src="img/catalog-page/catalog_card-6-7.jpg"
+                    alt="Комплект из молочного джемпера с пайетками и юбки макси" width="607" height="806"
+                    loading="lazy">
+                </div>
+              </div>
+              <div class="catalog_page_wrap_content_block_right">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-6.jpg" alt="Молочный джемпер с пайетками" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Молочный джемпер с пайетками</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">27 400 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-7.jpg" alt="Юбка макси с пайетками" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Юбка макси с пайетками</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">23 800 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog_page_wrap_content_block is-grid">
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-8.jpg" alt="Синий трикотажный топ" width="607" height="806"
+                    loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Синий трикотажный топ</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">12 900 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-9.jpg" alt="Хлопковый вязаный комплект" width="607"
+                    height="806" loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Хлопковый вязаный комплект</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">21 500 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-10.jpg" alt="Джемпер Breton" width="607" height="806"
+                    loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Джемпер Breton</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">26 400 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-11.jpg" alt="Белая хлопковая майка" width="607" height="806"
+                    loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Белая хлопковая майка</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">9 800 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <div class="product_card_media_badge">Sale</div>
+                  <img src="img/catalog-page/catalog_card-12.jpg" alt="Леопардовый джемпер Distressed" width="607"
+                    height="806" loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Леопардовый джемпер Distressed</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">25 900 ₽</span>
+                    <span class="product_card_content_prices_price old">31 600 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <div class="product_card_media_badge">Sale</div>
+                  <img src="img/catalog-page/catalog_card-13.jpg" alt="Серый джемпер Distressed" width="607"
+                    height="806" loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Серый джемпер Distressed</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">24 700 ₽</span>
+                    <span class="product_card_content_prices_price old">29 900 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-14.jpg" alt="Свитшот-поло Graphite" width="607" height="806"
+                    loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Свитшот-поло Graphite</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">19 400 ₽</span>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="product_card">
+                <div class="product_card_media">
+                  <img src="img/catalog-page/catalog_card-15.jpg" alt="Костюм с контрастной отделкой" width="607"
+                    height="806" loading="lazy">
+                </div>
+                <div class="product_card_content">
+                  <h3 class="product_card_content_title">Костюм с контрастной отделкой</h3>
+                  <div class="product_card_content_prices">
+                    <span class="product_card_content_prices_price">32 800 ₽</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="catalog_page_wrap_content_block is-complect">
+              <div class="catalog_page_wrap_content_block_left">
+                <div class="product_gallery">
+                  <img src="img/catalog-page/catalog_card-16-17.jpg"
+                    alt="Комплект из белой футболки Raw Edge и юбки плиссе Graphite" width="607" height="806"
+                    loading="lazy">
+                </div>
+              </div>
+              <div class="catalog_page_wrap_content_block_right">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-16.jpg" alt="Белая футболка Raw Edge" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Белая футболка Raw Edge</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">10 600 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-17.jpg" alt="Юбка плиссе Graphite" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Юбка плиссе Graphite</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">18 200 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="catalog_page_wrap_content_block is-line">
+              <div class="catalog_page_wrap_content_block_left">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-18.jpg" alt="Костюм University" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Костюм University</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">34 500 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-19.jpg" alt="Поло Riviera" width="607" height="806"
+                      loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Поло Riviera</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">17 200 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <div class="product_card_media_badge">Sale</div>
+                    <img src="img/catalog-page/catalog_card-20.jpg" alt="Графитовый джемпер с пайетками" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Графитовый джемпер с пайетками</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">26 800 ₽</span>
+                      <span class="product_card_content_prices_price old">32 400 ₽</span>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <div class="product_card_media_badge">Sale</div>
+                    <img src="img/catalog-page/catalog_card-21.jpg" alt="Замшевая куртка Saddle" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Замшевая куртка Saddle</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">74 900 ₽</span>
+                      <span class="product_card_content_prices_price old">89 500 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="catalog_page_wrap_content_block_right">
+                <a href="#" class="product_card">
+                  <div class="product_card_media">
+                    <img src="img/catalog-page/catalog_card-22.jpg" alt="Молочный костюм с пайетками" width="607"
+                      height="806" loading="lazy">
+                  </div>
+                  <div class="product_card_content">
+                    <h3 class="product_card_content_title">Молочный костюм с пайетками</h3>
+                    <div class="product_card_content_prices">
+                      <span class="product_card_content_prices_price">33 900 ₽</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog_page_wrap_pagination">
+            <a href="#" class="catalog_page_wrap_pagination_link is-disabled" aria-disabled="true">Назад</a>
+            <ul class="catalog_page_wrap_pagination_numbers">
+              <li class="is-current">
+                <span>(1)</span>
+              </li>
+              <li>
+                <a href="#">(2)</a>
+              </li>
+              <li>
+                <a href="#">(3)</a>
+              </li>
+              <li class="dots">
+                <span>...</span>
+              </li>
+              <li>
+                <a href="#">(8)</a>
+              </li>
+            </ul>
+            <a href="#" class="catalog_page_wrap_pagination_link">Вперед</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- footer %>

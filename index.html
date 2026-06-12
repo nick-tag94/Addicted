@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru" class="is-front">
+
+<head>
+  <meta charset="UTF-8" />
+  <title><%- title %></title>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+  <%- header %>
+
+    <a href="/catalog/" class="hero">
+      <div class="hero_gallery">
+        <picture>
+          <source srcset="img/hero_mobile.webp" media="(max-width: 479px)">
+          <img src="img/hero.webp" alt="Новая коллекция - Весна-лето 2026" width="1920" height="900" loading="eager">
+        </picture>
+      </div>
+      <div class="container">
+        <div class="hero_wrap">
+          <div class="hero_wrap_text">
+            Новая коллекция
+          </div>
+          <div class="hero_wrap_label">
+            весна-лето 2026
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <div class="home_categories">
+      <div class="container">
+        <div class="home_categories_row">
+          <a href="/catalog/kashemir/" class="home_categories_row_card is-large">
+            <span class="home_categories_row_card_image">
+              <img src="img/category_cashmere.jpg" alt="Кашемир" width="915" height="1014" loading="lazy">
+            </span>
+            <span class="home_categories_row_card_title">Кашемир</span>
+          </a>
+          <div class="home_categories_row_grid">
+            <a href="/catalog/verkhnyaya_odezhda/" class="home_categories_row_card">
+              <span class="home_categories_row_card_image">
+                <img src="img/category_outerwear.jpg" alt="Верхняя одежда" width="453" height="500" loading="lazy">
+              </span>
+              <span class="home_categories_row_card_title">Верхняя одежда</span>
+            </a>
+            <a href="/catalog/kozha/" class="home_categories_row_card">
+              <span class="home_categories_row_card_image">
+                <img src="img/category_leather.jpg" alt="Кожа" width="453" height="500" loading="lazy">
+              </span>
+              <span class="home_categories_row_card_title">Кожа</span>
+            </a>
+            <a href="/catalog/sport/" class="home_categories_row_card">
+              <span class="home_categories_row_card_image">
+                <img src="img/category_sport.jpg" alt="Спорт" width="453" height="500" loading="lazy">
+              </span>
+              <span class="home_categories_row_card_title">Спорт</span>
+            </a>
+            <a href="/catalog/aksessuary/" class="home_categories_row_card">
+              <span class="home_categories_row_card_image">
+                <img src="img/category_accessories.jpg" alt="Аксессуары" width="453" height="500" loading="lazy">
+              </span>
+              <span class="home_categories_row_card_title">Аксессуары</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="home_showcase">
+      <div class="container">
+        <div class="home_showcase_wrap row">
+          <div class="col-xl-2 col-md-3">
+            <div class="home_showcase_wrap_head">
+              <h2 class="home_showcase_wrap_head_title">Новинки</h2>
+              <div class="home_showcase_wrap_head_bottom">
+                <div class="home_showcase_wrap_head_bottom_navigation sw_navigation">
+                  <button type="button" class="home_showcase_wrap_head_bottom_navigation_prev swiper-button-prev"
+                    aria-label="Предыдущий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M23.5 10.5L0.499999 10.5M10.3571 0.5L0.499999 10.5L10.3571 20.5" stroke="#000"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button type="button" class="home_showcase_wrap_head_bottom_navigation_next swiper-button-next"
+                    aria-label="Следующий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M0.5 10.5H23.5M13.6429 20.5L23.5 10.5L13.6429 0.5" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="home_showcase_wrap_head_bottom_scrollbar swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-10 col-md-9">
+            <div class="home_showcase_wrap_slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/" class="product_card">
+                    <div class="product_card_media">
+                      <img src="img/product_card-1.jpg" alt="Синий трикотажный топ" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Синий трикотажный топ</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">12 900 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/" class="product_card">
+                    <div class="product_card_media">
+                      <img src="img/product_card-2.jpg" alt="Хлопковый вязаный комплект" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Хлопковый вязаный комплект</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">21 500 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/" class="product_card">
+                    <div class="product_card_media">
+                      <img src="img/product_card-3.jpg" alt="Белая хлопковая майка" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Белая хлопковая майка</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">9 800 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="home_showcase">
+      <div class="container">
+        <div class="home_showcase_wrap row">
+          <div class="col-xl-2 col-md-3">
+            <div class="home_showcase_wrap_head">
+              <h2 class="home_showcase_wrap_head_title">Sale</h2>
+              <div class="home_showcase_wrap_head_bottom">
+                <div class="home_showcase_wrap_head_bottom_navigation sw_navigation">
+                  <button type="button" class="home_showcase_wrap_head_bottom_navigation_prev swiper-button-prev"
+                    aria-label="Предыдущий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M23.5 10.5L0.499999 10.5M10.3571 0.5L0.499999 10.5L10.3571 20.5" stroke="#979797"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button type="button" class="home_showcase_wrap_head_bottom_navigation_next swiper-button-next"
+                    aria-label="Следующий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M0.5 10.5H23.5M13.6429 20.5L23.5 10.5L13.6429 0.5" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="home_showcase_wrap_head_bottom_scrollbar swiper-scrollbar"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-10 col-md-9">
+            <div class="home_showcase_wrap_slider swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/sale/" class="product_card">
+                    <div class="product_card_media">
+                      <div class="product_card_media_badge">Sale</div>
+                      <img src="img/product_card-5.jpg" alt="Вязаная хлопковая сумка Verde" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Вязаная сумка Verde</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">11 900 ₽</span>
+                        <span class="product_card_content_prices_price old">15 400 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/sale/" class="product_card">
+                    <div class="product_card_media">
+                      <div class="product_card_media_badge">Sale</div>
+                      <img src="img/product_card-4.jpg" alt="Вязаная хлопковая сумка Sky" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Вязаная сумка Sky</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">12 500 ₽</span>
+                        <span class="product_card_content_prices_price old">16 200 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide home_showcase_wrap_slider_card">
+                  <a href="/catalog/sale/" class="product_card">
+                    <div class="product_card_media">
+                      <div class="product_card_media_badge">Sale</div>
+                      <img src="img/product_card-6.jpg" alt="Хлопковый ажурный костюм" width="607" height="806" loading="lazy">
+                    </div>
+                    <div class="product_card_content">
+                      <h3 class="product_card_content_title">Ажурный хлопковый костюм</h3>
+                      <div class="product_card_content_prices">
+                        <span class="product_card_content_prices_price">24 900 ₽</span>
+                        <span class="product_card_content_prices_price old">31 800 ₽</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- footer %>

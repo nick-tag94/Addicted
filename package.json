@@ -1,0 +1,32 @@
+{
+  "name": "addicted-new",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^7.3.1",
+    "vite-plugin-html": "^3.2.2"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^6.1.10",
+    "bootstrap": "^5.3.8",
+    "fast-glob": "^3.3.3",
+    "gsap": "^3.15.0",
+    "jquery": "^4.0.0",
+    "locomotive-scroll": "^5.0.1",
+    "nouislider": "^15.8.1",
+    "sass": "^1.97.3",
+    "select2": "^4.1.0-rc.0",
+    "swiper": "^12.1.0",
+    "tippy.js": "^6.3.7"
+  }
+}

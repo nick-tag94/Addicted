@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <section class="basket_page">
+            <div class="container">
+                <h1 class="basket_page_title">Корзина</h1>
+                <div class="basket_page_wrap row">
+                    <div class="col-xl-8 col-md-7">
+                        <div class="basket_page_list" data-basket-list>
+                            <div class="basket_page_list_item" data-basket-item data-price="21500" data-old-price="0">
+                                <a href="/product/" class="basket_page_list_item_media">
+                                    <img src="img/product_card-2.jpg" alt="Хлопковый вязаный комплект" width="607"
+                                        height="806" loading="lazy">
+                                </a>
+                                <div class="basket_page_list_item_content">
+                                    <a href="/product/" class="basket_page_list_item_content_title">ХЛОПКОВЫЙ ВЯЗАНЫЙ
+                                        КОМПЛЕКТ</a>
+                                    <div class="basket_page_list_item_content_meta">XL | Ivory</div>
+                                </div>
+                                <div class="basket_page_list_item_price">
+                                    <span class="basket_page_list_item_price_current" data-basket-item-current>21 500
+                                        ₽</span>
+                                </div>
+                                <div class="basket_page_list_item_actions">
+                                    <div class="basket_page_list_item_actions_counter" data-basket-counter>
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-minus"
+                                            data-basket-minus aria-label="Уменьшить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="2"
+                                                viewBox="0 0 8 2" fill="none">
+                                                <path d="M0 2V0H8V2H0Z" fill="#121212" fill-opacity="0.3" />
+                                            </svg>
+                                        </button>
+                                        <input class="basket_page_list_item_actions_counter_input" type="number" min="1"
+                                            step="1" value="1" inputmode="numeric" data-basket-input
+                                            aria-label="Количество товара">
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-plus"
+                                            data-basket-plus aria-label="Увеличить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                viewBox="0 0 10 10" fill="none">
+                                                <path
+                                                    d="M4.02222 10V5.91111H0V4.08889H4.02222V0H5.97778V4.08889H10V5.91111H5.97778V10H4.02222Z"
+                                                    fill="#121212" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="basket_page_list_item_actions_stock">В наличии: 2</div>
+                                    <button type="button" class="basket_page_list_item_actions_remove"
+                                        data-basket-remove>Удалить</button>
+                                </div>
+                            </div>
+                            <div class="basket_page_list_item" data-basket-item data-price="12500"
+                                data-old-price="16200">
+                                <a href="/product/" class="basket_page_list_item_media">
+                                    <img src="img/product_card-4.jpg" alt="Вязаная сумка Sky" width="607" height="806"
+                                        loading="lazy">
+                                </a>
+                                <div class="basket_page_list_item_content">
+                                    <a href="/product/" class="basket_page_list_item_content_title">ВЯЗАНАЯ СУМКА
+                                        SKY</a>
+                                    <div class="basket_page_list_item_content_meta">One size | Sky</div>
+                                </div>
+                                <div class="basket_page_list_item_price">
+                                    <span class="basket_page_list_item_price_current" data-basket-item-current>12 500
+                                        ₽</span>
+                                    <span class="basket_page_list_item_price_old" data-basket-item-old>16 200 ₽</span>
+                                </div>
+                                <div class="basket_page_list_item_actions">
+                                    <div class="basket_page_list_item_actions_counter" data-basket-counter>
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-minus"
+                                            data-basket-minus aria-label="Уменьшить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="2"
+                                                viewBox="0 0 8 2" fill="none">
+                                                <path d="M0 2V0H8V2H0Z" fill="#121212" fill-opacity="0.3" />
+                                            </svg>
+                                        </button>
+                                        <input class="basket_page_list_item_actions_counter_input" type="number" min="1"
+                                            step="1" value="1" inputmode="numeric" data-basket-input
+                                            aria-label="Количество товара">
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-plus"
+                                            data-basket-plus aria-label="Увеличить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                viewBox="0 0 10 10" fill="none">
+                                                <path
+                                                    d="M4.02222 10V5.91111H0V4.08889H4.02222V0H5.97778V4.08889H10V5.91111H5.97778V10H4.02222Z"
+                                                    fill="#121212" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="basket_page_list_item_actions_stock">В наличии: 3</div>
+                                    <button type="button" class="basket_page_list_item_actions_remove"
+                                        data-basket-remove>Удалить</button>
+                                </div>
+                            </div>
+                            <div class="basket_page_list_item" data-basket-item data-price="24900"
+                                data-old-price="31800">
+                                <a href="/product/" class="basket_page_list_item_media">
+                                    <img src="img/product_card-6.jpg" alt="Ажурный хлопковый костюм" width="607"
+                                        height="806" loading="lazy">
+                                </a>
+                                <div class="basket_page_list_item_content">
+                                    <a href="/product/" class="basket_page_list_item_content_title">АЖУРНЫЙ ХЛОПКОВЫЙ
+                                        КОСТЮМ</a>
+                                    <div class="basket_page_list_item_content_meta">M | Natural</div>
+                                </div>
+                                <div class="basket_page_list_item_price">
+                                    <span class="basket_page_list_item_price_current" data-basket-item-current>24 900
+                                        ₽</span>
+                                    <span class="basket_page_list_item_price_old" data-basket-item-old>31 800 ₽</span>
+                                </div>
+                                <div class="basket_page_list_item_actions">
+                                    <div class="basket_page_list_item_actions_counter" data-basket-counter>
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-minus"
+                                            data-basket-minus aria-label="Уменьшить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="2"
+                                                viewBox="0 0 8 2" fill="none">
+                                                <path d="M0 2V0H8V2H0Z" fill="#121212" fill-opacity="0.3" />
+                                            </svg>
+                                        </button>
+                                        <input class="basket_page_list_item_actions_counter_input" type="number" min="1"
+                                            step="1" value="1" inputmode="numeric" data-basket-input
+                                            aria-label="Количество товара">
+                                        <button type="button"
+                                            class="basket_page_list_item_actions_counter_button is-plus"
+                                            data-basket-plus aria-label="Увеличить количество">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10"
+                                                viewBox="0 0 10 10" fill="none">
+                                                <path
+                                                    d="M4.02222 10V5.91111H0V4.08889H4.02222V0H5.97778V4.08889H10V5.91111H5.97778V10H4.02222Z"
+                                                    fill="#121212" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="basket_page_list_item_actions_stock">В наличии: 3</div>
+                                    <button type="button" class="basket_page_list_item_actions_remove"
+                                        data-basket-remove>Удалить</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-xl-1 col-xl-3 col-md-5">
+                        <aside class="basket_page_sidebar">
+                            <div class="basket_page_sidebar_title">ИТОГ</div>
+                            <div class="basket_page_sidebar_promo" data-order-promo>
+                                <button type="button" class="basket_page_sidebar_promo_toggle" data-order-promo-toggle
+                                    aria-expanded="false">
+                                    <span>Добавить промокод</span>
+                                    <span class="basket_page_sidebar_promo_toggle_icon" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="6" viewBox="0 0 9 6"
+                                            fill="none">
+                                            <path d="M0.5 0.5L4.5 4.5L8.5 0.5" stroke="black" stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="basket_page_sidebar_promo_body" data-order-promo-body hidden>
+                                    <div class="basket_page_sidebar_promo_body_inner">
+                                        <form class="basket_page_sidebar_promo_form">
+                                            <input class="basket_page_sidebar_promo_form_input" type="text" name="promo"
+                                                placeholder="Промокод">
+                                            <button type="button"
+                                                class="basket_page_sidebar_promo_form_button">Применить</button>
+                                        </form>
+                                        <div class="basket_page_sidebar_promo_success">Промокод успешно применён!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="basket_page_sidebar_totals">
+                                <div class="basket_page_sidebar_totals_item">
+                                    <span>Итого к заказу:</span>
+                                    <span data-basket-subtotal>69 500 ₽</span>
+                                </div>
+                                <div class="basket_page_sidebar_totals_item is-total">
+                                    <span>Итого с учётом промокода:</span>
+                                    <span data-basket-total>58 900 ₽</span>
+                                </div>
+                            </div>
+                            <a href="/checkout/" class="basket_page_sidebar_button" data-basket-checkout-button>ОФОРМИТЬ
+                                ЗАКАЗ</a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- footer %>

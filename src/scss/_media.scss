@@ -1,0 +1,193 @@
+@use "sass:math";
+
+$desktop-above: 1440px;
+$desktop: 1439px;
+
+$tablet-above: 1200px;
+$tablet: 1199px;
+
+$laptop-above: 992px;
+$laptop: 991px;
+
+$mobile-above: 768px;
+$mobile: 767px;
+
+$mobile-s-above: 480px;
+$mobile-s: 479px;
+
+@mixin desktop-above {
+  @media (min-width: $desktop-above) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin tablet-above {
+  @media (min-width: $tablet-above) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop-above {
+  @media (min-width: $laptop-above) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin mobile-above {
+  @media (min-width: $mobile-above) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above {
+  @media (min-width: $mobile-s-above) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (max-width: $mobile-s) {
+    @content;
+  }
+}
+
+@mixin cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin will($prop) {
+  transform: translateZ(0);
+  will-change: #{$prop};
+}
+
+@mixin image($max-width: 100%, $aspect-ratio: auto) {
+  display: flex;
+  overflow: hidden;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: $max-width;
+  aspect-ratio: $aspect-ratio;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@mixin icon($max-width: 100%, $aspect-ratio: auto) {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: $max-width;
+  aspect-ratio: $aspect-ratio;
+
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@function fd($max, $min) {
+  $max-vw: 1920;
+  $min-vw: 1440;
+
+  $slope: math.div(($max - $min), ($max-vw - $min-vw));
+  $y-axis: $min - $slope * $min-vw;
+
+  $from: min($min, $max);
+  $to: max($min, $max);
+
+  @return clamp(#{$from}px, #{$y-axis}px + #{$slope * 100}vw, #{$to}px);
+}
+
+@function ft($max, $min) {
+  $max-vw: 1440;
+  $min-vw: 1200;
+
+  $slope: math.div(($max - $min), ($max-vw - $min-vw));
+  $y-axis: $min - $slope * $min-vw;
+
+  $from: min($min, $max);
+  $to: max($min, $max);
+
+  @return clamp(#{$from}px, #{$y-axis}px + #{$slope * 100}vw, #{$to}px);
+}
+
+@function fl($max, $min) {
+  $max-vw: 1920;
+  $min-vw: 1200;
+
+  $slope: math.div(($max - $min), ($max-vw - $min-vw));
+  $y-axis: $min - $slope * $min-vw;
+
+  $from: min($min, $max);
+  $to: max($min, $max);
+
+  @return clamp(#{$from}px, #{$y-axis}px + #{$slope * 100}vw, #{$to}px);
+}
+
+@function fm($max, $min) {
+  $max-vw: 1920;
+  $min-vw: 768;
+
+  $slope: math.div(($max - $min), ($max-vw - $min-vw));
+  $y-axis: $min - $slope * $min-vw;
+
+  $from: min($min, $max);
+  $to: max($min, $max);
+
+  @return clamp(#{$from}px, #{$y-axis}px + #{$slope * 100}vw, #{$to}px);
+}
+
+@mixin up($px) {
+  @media (min-width: #{$px}px) {
+    @content;
+  }
+}
+
+@mixin down($px) {
+  @media (max-width: #{$px}px) {
+    @content;
+  }
+}
