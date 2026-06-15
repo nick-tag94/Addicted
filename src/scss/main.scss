@@ -963,7 +963,7 @@ html.is-front {
         }
 
         @include mobile {
-          aspect-ratio: 1;
+          aspect-ratio: 168/185;
         }
 
         img {
@@ -1283,7 +1283,7 @@ html.is-front {
           display: inline-flex;
           align-items: center;
           column-gap: 8px;
-          padding: fm(11,10) 14px fm(7,8) 14px;
+          padding: fm(11, 10) 14px fm(7, 8) 14px;
           background: #2b2b2b;
           color: var(--color-light);
           font-size: fm(12, 10);
@@ -1880,6 +1880,60 @@ html.is-front {
     @include image(100%, math.div(607, 806));
     @include will(transform);
     transition: 0.4s ease;
+
+    &_favorite {
+      position: absolute;
+      top: fm(10,5);
+      left: fm(10,5);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fm(40, 30);
+      height: fm(40, 30);
+      border: 1px solid rgba(43, 43, 43, 0.12);
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+      transition:
+        transform 0.4s ease,
+        background-color 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+
+
+      svg {
+        width: fm(18, 13);
+        height: fm(17, 12);
+
+        path {
+          transition: fill 0.4s ease;
+        }
+      }
+
+      @include hover {
+        background: #2b2b2b;
+        border-color: #2b2b2b;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+
+        svg {
+          path {
+            fill: var(--color-light);
+          }
+        }
+      }
+
+      &.is-added {
+        background: #2b2b2b;
+        border-color: #2b2b2b;
+
+        svg {
+          path {
+            fill: var(--color-light);
+          }
+        }
+      }
+    }
 
     &_badge {
       position: absolute;
@@ -2576,94 +2630,6 @@ html.is-front {
   }
 }
 
-.shop {
-  margin-top: fm(140, 82);
-
-  &_title {
-    color: var(--color-dark);
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 127%;
-    text-transform: uppercase;
-    margin-bottom: 42px;
-
-    @include tablet {
-      font-size: 16px;
-      margin-bottom: 24px;
-    }
-  }
-  &_image {
-    display: flex;
-    flex-direction: column;
-    row-gap: 40px;
-
-    @include tablet {
-      row-gap: 20px;
-    }
-    @include mobile {
-      display: none;
-    }
-
-    &_block {
-      display: flex;
-      width: 100%;
-      max-width: 100%;
-      aspect-ratio: 437/527;
-
-      img {
-        @include cover;
-      }
-    }
-  }
-  &_list {
-    &_card {
-      &:not(:last-child) {
-        margin-bottom: 30px;
-
-        @include tablet {
-          margin-bottom: 20px;
-        }
-      }
-      &_title {
-        color: var(--color-dark);
-        font-size: 18px;
-        line-height: 127%;
-
-        @include tablet {
-          font-size: 14px;
-        }
-      }
-      &_inform {
-        p {
-          color: var(--color-dark);
-          font-size: 18px;
-          line-height: 127%;
-
-          @include tablet {
-            font-size: 14px;
-          }
-        }
-        a {
-          color: var(--color-dark);
-          font-size: 18px;
-          line-height: 127%;
-          text-decoration: underline;
-          text-underline-offset: 2px;
-          text-decoration-thickness: 1px;
-
-          @include tablet {
-            font-size: 14px;
-          }
-
-          @include hover {
-            opacity: 0.7;
-          }
-        }
-      }
-    }
-  }
-}
-
 .search_page {
   margin-top: fm(140, 82);
 
@@ -2790,421 +2756,6 @@ html.is-front {
 
     @include mobile {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-}
-
-.basket_page {
-  margin-top: fm(140, 82);
-
-  &_title {
-    color: var(--color-dark);
-    font-family: var(--font-play);
-    font-size: fm(50, 28);
-    line-height: fm(56, 32);
-    font-weight: 400;
-    letter-spacing: 0.56px;
-    margin: 0;
-  }
-
-  &_wrap {
-    margin-top: fm(32, 16);
-    row-gap: 24px;
-  }
-}
-
-.basket_page {
-  &_list {
-    border: 1px solid #e2e2e2;
-    padding: fm(31, 23);
-    background: var(--color-light);
-
-    &_item {
-      display: grid;
-      grid-template-columns: fm(156, 100) minmax(0, 1fr) fm(180, 140) 132px;
-      column-gap: fm(32, 24);
-      padding-bottom: fm(32, 24);
-      margin-bottom: fm(32, 24);
-      position: relative;
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        background: #e2e2e2;
-      }
-
-      &:last-child {
-        border-bottom: 0;
-        margin-bottom: 0;
-        padding-bottom: 0;
-
-        &::after {
-          display: none;
-        }
-      }
-
-      &_media {
-        @include image(156px, math.div(607, 806));
-        @include will(transform);
-        transition: 0.6s ease;
-        position: relative;
-        background: #f8f6f1;
-
-        @include hover {
-          transform: scale(0.95);
-        }
-      }
-
-      &_content {
-        min-width: 0;
-
-        &_title {
-          color: var(--color-dark);
-          font-size: fm(24, 16);
-          font-weight: 300;
-          line-height: fm(30, 22);
-          letter-spacing: fm(1.06, 0.72);
-          text-transform: uppercase;
-
-          @include hover {
-            color: var(--color-gray-light);
-          }
-        }
-
-        &_meta {
-          color: var(--color-gray-light);
-          font-size: fm(16, 14);
-          font-weight: 300;
-          line-height: fm(22, 20);
-          letter-spacing: fm(0.64, 0.56);
-          margin-top: fm(8, 6);
-        }
-      }
-
-      &_price {
-        min-width: 0;
-        display: flex;
-        flex-direction: column;
-        row-gap: fm(8, 6);
-
-        &_current {
-          color: var(--color-dark);
-          font-size: fm(24, 16);
-          line-height: fm(30, 22);
-          letter-spacing: fm(1.06, 0.72);
-        }
-
-        &_old {
-          color: var(--color-gray-light);
-          font-size: fm(16, 14);
-          font-weight: 300;
-          line-height: fm(22, 20);
-          letter-spacing: fm(0.64, 0.56);
-          position: relative;
-          max-width: fit-content;
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 50%;
-            height: 1px;
-            top: 50%;
-            transform: translateX(-50%) translateY(calc(-50% - 1px));
-            width: calc(100% + 4px);
-            background: var(--color-gray-light);
-          }
-        }
-      }
-
-      &_actions {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-self: end;
-        width: 100%;
-        row-gap: fm(8, 6);
-
-        &_counter {
-          display: flex;
-          column-gap: 2px;
-          justify-content: end;
-
-          &_button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 1;
-            max-width: 40px;
-            width: 100%;
-            flex-shrink: 0;
-            color: var(--color-dark);
-            background: #f6f6f6;
-            text-align: center;
-            font-size: fm(18, 14);
-            line-height: fm(24, 20);
-            letter-spacing: fm(0.72, 0.56);
-          }
-
-          &_input {
-            display: flex;
-            width: 40px;
-            min-width: 40px;
-            max-width: 40px;
-            align-items: center;
-            justify-content: center;
-            background: transparent;
-            color: var(--color-dark);
-            background: #f6f6f6;
-            text-align: center;
-            font-size: fm(18, 14);
-            line-height: fm(24, 20);
-            letter-spacing: fm(0.72, 0.56);
-          }
-
-          &_button {
-            @include hover {
-              background: #2b2b2b;
-              svg {
-                path {
-                  fill: var(--color-light);
-                }
-              }
-            }
-          }
-
-          &_input {
-            width: 100%;
-            outline: none;
-            pointer-events: none;
-            -moz-appearance: textfield;
-            transition: color 0.2s ease;
-
-            &::-webkit-inner-spin-button,
-            &::-webkit-outer-spin-button {
-              -webkit-appearance: none;
-              margin: 0;
-            }
-          }
-        }
-
-        &_stock {
-          color: var(--color-gray-light);
-          font-size: fm(18, 14);
-          font-weight: 300;
-          line-height: fm(24, 20);
-          letter-spacing: fm(0.72, 0.56);
-          text-align: right;
-
-          @include mobile-s {
-            text-align: left;
-          }
-        }
-
-        &_remove {
-          border: 0;
-          padding: 0;
-          margin-top: auto;
-          background: transparent;
-          color: var(--color-gray-light);
-          font-size: fm(18, 14);
-          font-weight: 300;
-          line-height: fm(24, 20);
-          letter-spacing: fm(0.72, 0.56);
-          text-align: right;
-
-          @include tablet {
-            margin-top: 44px;
-          }
-
-          @include mobile-s {
-            margin-top: 12px;
-            text-align: left;
-          }
-
-          @include hover {
-            color: var(--color-dark);
-          }
-        }
-      }
-    }
-  }
-
-  &_sidebar {
-    background: #f6f6f6;
-    padding: fm(34, 24);
-
-    &_title {
-      color: var(--color-dark);
-      font-size: fm(24, 20);
-      font-weight: 300;
-      line-height: fm(30, 26);
-      letter-spacing: fm(1.06, 0.8);
-      text-transform: uppercase;
-    }
-
-    &_promo {
-      margin-top: 24px;
-      border-top: 1px solid #e3dfd9;
-      border-bottom: 1px solid #e3dfd9;
-
-      &_toggle {
-        width: 100%;
-        padding-block: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: var(--color-dark);
-        font-size: fm(16, 14);
-        line-height: fm(22, 20);
-        letter-spacing: fm(0.64, 0.56);
-        font-weight: 300;
-
-        &_icon {
-          @include icon(9px, math.div(9, 6));
-          transition: transform 0.3s ease;
-        }
-      }
-
-      &.is-open {
-        .basket_page_sidebar_promo_toggle_icon {
-          transform: rotate(180deg);
-        }
-      }
-
-      &_body {
-        overflow: hidden;
-
-        &_inner {
-          padding-bottom: 16px;
-        }
-      }
-
-      &_form {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) auto;
-        gap: 16px;
-
-        @include mobile-s {
-          grid-template-columns: minmax(0, 1fr);
-        }
-
-        &_input {
-          background: var(--color-light);
-          padding: 14px 16px 10px 16px;
-          color: var(--color-dark);
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.56px;
-          font-weight: 300;
-
-          &::placeholder {
-            color: var(--color-gray-light);
-          }
-        }
-
-        &_button {
-          border: 1px solid var(--color-dark);
-          background: transparent;
-          color: var(--color-dark);
-          font-size: 14px;
-          line-height: 20px;
-          letter-spacing: 0.56px;
-          padding: 14px 16px 10px 16px;
-          font-weight: 300;
-
-          @include hover {
-            background: #2b2b2b;
-            color: var(--color-light);
-          }
-        }
-      }
-
-      &_success {
-        color: #337e29;
-        font-size: 12px;
-        line-height: 18px;
-        letter-spacing: 0.48px;
-        margin-top: 12px;
-      }
-    }
-
-    &_totals {
-      &_item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        column-gap: 16px;
-        color: var(--color-dark);
-        font-size: fm(16, 14);
-        line-height: fm(22, 20);
-        letter-spacing: fm(0.64, 0.56);
-        font-weight: 300;
-        padding-block: 16px;
-        position: relative;
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          height: 1px;
-          width: 100%;
-          background: #e2e2e2;
-        }
-
-        span:last-child {
-          white-space: nowrap;
-        }
-
-        &.is-total {
-          border-bottom: 0;
-          padding-bottom: 0;
-
-          &::after {
-            display: none;
-          }
-
-          span:last-child {
-            font-size: fm(24, 20);
-            line-height: fm(30, 26);
-            letter-spacing: fm(1.06, 0.8);
-            font-weight: 400;
-          }
-        }
-      }
-    }
-
-    &_button {
-      margin-top: 24px;
-      position: relative;
-      display: flex;
-      width: 100%;
-      column-gap: 8px;
-      align-items: center;
-      justify-content: center;
-      padding: fm(20, 16) fm(20, 16) fm(16, 12) fm(20, 16);
-      box-sizing: border-box;
-      border-radius: 4px;
-      background: #2b2b2b;
-      color: var(--color-light);
-      font-size: fm(16, 14);
-      line-height: fm(22, 20);
-      letter-spacing: fm(0.64, 0.56);
-      font-weight: 300;
-      text-transform: uppercase;
-      white-space: nowrap;
-      transition: 0.4s ease;
-      text-align: center;
-      overflow: hidden;
-
-      @include hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
-      }
     }
   }
 }

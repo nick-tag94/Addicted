@@ -114,6 +114,17 @@ export default defineConfig(({ command }) => {
         name: "remove-components-from-build",
         apply: "build",
         closeBundle() {
+          const normalizeBuiltCssAssetPaths = (cssPath) => {
+            if (!fs.existsSync(cssPath)) return;
+
+            const cssContent = fs.readFileSync(cssPath, "utf-8");
+            const normalizedCssContent = cssContent
+              .replaceAll("url(/assets/icon/", "url(../assets/icon/")
+              .replaceAll("url(/assets/", "url(../assets/");
+
+            fs.writeFileSync(cssPath, normalizedCssContent);
+          };
+
           fs.rmSync(resolve(__dirname, "build/components"), {
             recursive: true,
             force: true,
@@ -122,6 +133,29 @@ export default defineConfig(({ command }) => {
             recursive: true,
             force: true,
           });
+
+          const basketCssPath = resolve(__dirname, "build/assets/basket.css");
+          const main2vCssPath = resolve(__dirname, "build/assets/main-2v.css");
+          const basketHtmlPath = resolve(__dirname, "build/basket.html");
+
+          if (fs.existsSync(basketCssPath)) {
+            fs.renameSync(basketCssPath, main2vCssPath);
+          }
+
+          normalizeBuiltCssAssetPaths(main2vCssPath);
+          normalizeBuiltCssAssetPaths(
+            resolve(__dirname, "build/assets/main.css"),
+          );
+
+          if (fs.existsSync(basketHtmlPath)) {
+            const basketHtml = fs.readFileSync(basketHtmlPath, "utf-8");
+            const updatedBasketHtml = basketHtml.replaceAll(
+              "/assets/basket.css",
+              "/assets/main-2v.css",
+            );
+
+            fs.writeFileSync(basketHtmlPath, updatedBasketHtml);
+          }
         },
       },
       sharedComponentsPlugin(componentAssetBase),
@@ -212,11 +246,71 @@ export default defineConfig(({ command }) => {
             },
           },
           {
+            filename: "basket",
+            template: "basket.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Корзина",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "checkout",
+            template: "checkout.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Оформление заказа",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "basket-stub",
+            template: "basket-stub.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Корзина пуста",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "order-success",
+            template: "order-success.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Заказ оформлен",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
             filename: "wishlist",
             template: "wishlist.html",
             injectOptions: {
               data: {
                 title: "Addicted - Избранное",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "shop",
+            template: "shop.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Магазины",
                 assetBase: basePath,
                 header: sharedComponentTokens.header,
                 footer: sharedComponentTokens.footer,

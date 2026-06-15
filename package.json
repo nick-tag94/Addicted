@@ -21,6 +21,7 @@
     "bootstrap": "^5.3.8",
     "fast-glob": "^3.3.3",
     "gsap": "^3.15.0",
+    "inputmask": "^5.0.9",
     "jquery": "^4.0.0",
     "locomotive-scroll": "^5.0.1",
     "nouislider": "^15.8.1",

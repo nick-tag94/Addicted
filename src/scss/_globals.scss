@@ -721,6 +721,13 @@ html {
 
     .cart_filter_price {
       padding-bottom: 6px;
+
+      &.is-active {
+        .cart_filter_price_input {
+          color: var(--color-dark);
+        }
+      }
+
       &_fields {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -884,15 +891,94 @@ html {
   }
 }
 
-// html,
-// body,
-// #smooth-wrapper,
-// #smooth-content {
-//   -ms-overflow-style: none;
-//   scrollbar-width: none;
+.cookies_block {
+  position: fixed;
+  left: 0;
+  bottom: 20px;
+  z-index: 30;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+  transform: translateY(12px);
 
-//   &::-webkit-scrollbar {
-//     display: none;
-//     background: transparent;
-//   }
-// }
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &_wrap {
+    width: 100%;
+    max-width: fm(620, 349);
+    display: flex;
+    align-items: center;
+    column-gap: fm(24, 12);
+    padding: fm(20, 16) fm(24, 16);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(43, 43, 43, 0.12);
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(17px);
+    pointer-events: auto;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 12px;
+    }
+
+    &_text {
+      flex: 1 1 auto;
+      color: var(--color-dark);
+      font-size: fm(14, 12);
+      line-height: fm(20, 18);
+      letter-spacing: fm(0.56, 0.48);
+      font-weight: 300;
+
+      a {
+        color: var(--color-dark);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+        transition: color 0.3s ease;
+
+        @include hover {
+          color: var(--color-gray-light);
+        }
+      }
+    }
+
+    &_btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      padding: fm(16, 12) fm(28, 20) fm(12, 10);
+      border-radius: 4px;
+      background: var(--color-dark);
+      color: var(--color-light);
+      font-size: fm(14, 12);
+      line-height: fm(20, 18);
+      letter-spacing: fm(0.56, 0.48);
+      font-weight: 300;
+      text-transform: uppercase;
+      transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        background-color 0.4s ease,
+        color 0.4s ease;
+
+      @include hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+      }
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}

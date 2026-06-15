@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/src/scss/main-2v.scss" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <form class="checkout_page" action="#" method="get" data-order-static-count="3">
+            <div class="container">
+                <h1 class="basket_page_title">Оформление заказа</h1>
+                <div class="checkout_page_wrap row">
+                    <div class="col-xl-8">
+                        <div class="checkout_page_form">
+                            <div class="checkout_page_form_section">
+                                <div class="checkout_page_form_section_title">Информация о клиенте</div>
+                                <div class="checkout_page_form_fields">
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">Имя</span>
+                                        <input class="checkout_page_form_field_input" type="text" name="first_name"
+                                            placeholder="Ваше имя">
+                                    </label>
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">Фамилия</span>
+                                        <input class="checkout_page_form_field_input" type="text" name="last_name"
+                                            placeholder="Ваша фамилия">
+                                    </label>
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">E-mail</span>
+                                        <input class="checkout_page_form_field_input" type="email" name="email"
+                                            placeholder="Ваш e-mail">
+                                    </label>
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">Телефон</span>
+                                        <input class="checkout_page_form_field_input" type="tel" name="phone"
+                                            placeholder="+7 (XXX) XXX-XX-XX">
+                                    </label>
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">Местоположение</span>
+                                        <input class="checkout_page_form_field_input" type="text" name="city"
+                                            placeholder="Город для доставки">
+                                    </label>
+                                    <label class="checkout_page_form_field">
+                                        <span class="checkout_page_form_field_label">Индекс</span>
+                                        <input class="checkout_page_form_field_input" type="text" name="postcode"
+                                            placeholder="Почтовый индекс">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="checkout_page_form_section">
+                                <div class="checkout_page_form_section_title">Доставка и оплата</div>
+                                <div class="checkout_page_form_options">
+                                    <div class="checkout_page_form_options_col checkout_page_form_options_col-delivery">
+                                        <div class="checkout_page_form_group">
+                                            <div class="checkout_page_form_group_label">Доставка</div>
+                                            <div class="checkout_page_form_group_radios">
+                                                <label class="checkout_page_form_radio">
+                                                    <input type="radio" name="delivery" value="pickup" checked>
+
+                                                    <span class="checkout_page_form_radio_text">Самовывоз</span>
+                                                </label>
+                                                <label class="checkout_page_form_radio">
+                                                    <input type="radio" name="delivery" value="door">
+
+                                                    <span class="checkout_page_form_radio_text">Посылка
+                                                        дверь-дверь</span>
+                                                </label>
+                                                <label class="checkout_page_form_radio">
+                                                    <input type="radio" name="delivery" value="warehouse">
+
+                                                    <span class="checkout_page_form_radio_text">Посылка
+                                                        дверь-склад</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="checkout_page_form_delivery_pickup">
+                                            <div class="checkout_page_form_delivery_pickup_text">
+                                                <p>
+                                                    Стоимость - бесплатно
+                                                </p>
+                                                <p>
+                                                    Вы можете самостоятельно забрать заказ из нашего
+                                                    магазина
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="checkout_page_form_delivery_extra" hidden>
+                                            <div class="checkout_page_form_delivery_extra_notice">
+                                                <div class="checkout_page_form_delivery_extra_notice_title">Не удалось
+                                                    рассчитать стоимость доставки</div>
+                                                <div class="checkout_page_form_delivery_extra_notice_text">
+                                                    Вы можете продолжить оформление заказа, а чуть позже менеджер
+                                                    магазина свяжется с вами и уточнит информацию по доставке
+                                                </div>
+                                            </div>
+                                            <div class="checkout_page_form_delivery_extra_text">
+                                                Услуга экономичной доставки товаров по России для компаний,
+                                                осуществляющих дистанционную торговлю
+                                            </div>
+                                            <div class="checkout_page_form_delivery_extra_fields">
+                                                <label class="checkout_page_form_check">
+                                                    <input type="checkbox" name="cargo_insurance" checked>
+                                                    <span class="checkout_page_form_check_text">Страхование груза
+                                                        (430.50 ₽)</span>
+                                                </label>
+                                                <label class="checkout_page_form_field">
+                                                    <span class="checkout_page_form_field_label">Улица</span>
+                                                    <input class="checkout_page_form_field_input" type="text"
+                                                        name="street" placeholder="Улица">
+                                                </label>
+                                                <label class="checkout_page_form_field">
+                                                    <span class="checkout_page_form_field_label">Дом</span>
+                                                    <input class="checkout_page_form_field_input" type="text"
+                                                        name="house" placeholder="Дом">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout_page_form_options_col checkout_page_form_options_col-payment">
+                                        <div class="checkout_page_form_group">
+                                            <div class="checkout_page_form_group_label">Оплата</div>
+                                            <div class="checkout_page_form_group_radios">
+                                                <label class="checkout_page_form_radio">
+                                                    <input type="radio" name="payment" value="card" checked>
+
+                                                    <span class="checkout_page_form_radio_text">Картой онлайн</span>
+                                                </label>
+                                                <label class="checkout_page_form_radio">
+                                                    <input type="radio" name="payment" value="dolyami">
+
+                                                    <span class="checkout_page_form_radio_text">Долями - оплата
+                                                        частями</span>
+                                                </label>
+                                            </div>
+                                            <div class="checkout_page_form_payment_note" data-payment-note="card">
+                                                Оплата производится в ЮMoney, через сервис ЮKassa. Подтверждением
+                                                вашей оплаты является электронное почтовое уведомление, пришедшее после
+                                                оплаты
+                                            </div>
+                                            <div class="checkout_page_form_payment_note" data-payment-note="dolyami"
+                                                hidden>
+                                                После оформления заказа будет сформирована ссылка для дальнейшей оплаты
+                                                долями
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="checkout_page_form_options_col checkout_page_form_options_col-comment">
+                                        <label
+                                            class="checkout_page_form_field is-wide checkout_page_form_delivery_comment">
+                                            <span class="checkout_page_form_field_label">Комментарий</span>
+                                            <textarea class="checkout_page_form_field_input is-textarea"
+                                                name="comment" data-lenis-prevent></textarea>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-xl-1 col-xl-3">
+                        <aside class="checkout_page_sidebar">
+                            <div class="checkout_page_sidebar_title">ИТОГ</div>
+                            <div class="checkout_page_sidebar_totals">
+                                <div class="checkout_page_sidebar_totals_item">
+                                    <span>Товаров на:</span>
+                                    <span>58 900 ₽</span>
+                                </div>
+                                <div class="checkout_page_sidebar_totals_item">
+                                    <span>Доставка:</span>
+                                    <span>Бесплатно</span>
+                                </div>
+                                <div class="checkout_page_sidebar_totals_item is-total">
+                                    <span>Итого с учётом промокода:</span>
+                                    <span>58 900 ₽</span>
+                                </div>
+                            </div>
+                            <label class="checkout_page_sidebar_agreement">
+                                <input type="checkbox" name="USER_CONSENT" id="user-consent-checkbox">
+                                <span class="checkout_page_sidebar_agreement_text">
+                                    Даю согласие на обработку моих <a href="/privacy-policy/"
+                                        target="_blank">персональных данных</a> в соответствии с
+                                    Федеральным законом №152-ФЗ «О персональных данных» и условиями Согласия.
+                                </span>
+                            </label>
+                            <a href="#" class="checkout_page_sidebar_button">Перейти к оплате</a>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <%- footer %>
