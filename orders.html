@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/src/scss/main-2v.scss" />
+    <link rel="stylesheet" href="/src/scss/main-3v.scss" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <section class="account_page">
+            <div class="container">
+                <h1 class="account_page_title">
+                    Личный кабинет
+                </h1>
+                <div class="row">
+                    <div class="col-xl-2">
+                        <aside class="account_page_navigation">
+                            <div class="account_page_navigation_list">
+                                <a href="#" class="account_page_navigation_list_link">
+                                    <span class="account_page_navigation_list_link_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M14.6247 7.69165H5.37467C4.9658 7.69165 4.57367 7.85408 4.28455 8.14319C3.99543 8.43231 3.83301 8.82444 3.83301 9.23332V14.6267C3.83345 15.4441 4.15849 16.2279 4.73668 16.8058C5.31487 17.3837 6.09888 17.7083 6.91634 17.7083H13.083C13.9005 17.7083 14.6845 17.3837 15.2627 16.8058C15.8409 16.2279 16.1659 15.4441 16.1663 14.6267V9.23332C16.1663 8.82444 16.0039 8.43231 15.7148 8.14319C15.4257 7.85408 15.0335 7.69165 14.6247 7.69165Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M13.8538 9.62752V6.15086C13.8554 5.38803 13.6304 4.64192 13.2072 4.0072C12.7841 3.37249 12.1819 2.87778 11.4772 2.58586C10.8911 2.34306 10.2542 2.2486 9.62293 2.31085C8.99164 2.37311 8.38545 2.59016 7.85812 2.94276C7.33078 3.29536 6.89859 3.77261 6.59985 4.33222C6.30111 4.89183 6.14505 5.5165 6.14551 6.15086V9.62752"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Мои кабинет
+                                </a>
+                                <a href="#" class="account_page_navigation_list_link is-active">
+                                    <span class="account_page_navigation_list_link_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M4 17V16.125C4 14.5005 4.63214 12.9426 5.75736 11.794C6.88258 10.6453 8.4087 10 10 10M10 10C11.5913 10 13.1174 10.6453 14.2426 11.794C15.3679 12.9426 16 14.5005 16 16.125V17M10 10C10.9093 10 11.7814 9.63125 12.4244 8.97487C13.0673 8.3185 13.4286 7.42826 13.4286 6.5C13.4286 5.57174 13.0673 4.6815 12.4244 4.02513C11.7814 3.36875 10.9093 3 10 3C9.09069 3 8.21862 3.36875 7.57563 4.02513C6.93265 4.6815 6.57143 5.57174 6.57143 6.5C6.57143 7.42826 6.93265 8.3185 7.57563 8.97487C8.21862 9.63125 9.09069 10 10 10Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Мой заказы
+                                </a>
+                            </div>
+                            <a href="#" class="account_page_navigation_link">
+                                <span class="account_page_navigation_link_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <rect width="20" height="20" />
+                                        <path
+                                            d="M10 7.375L12.625 10L10 12.625M12.625 10H3M14.2002 3C15.1803 3 15.6696 3 16.044 3.19074C16.3733 3.35852 16.6417 3.62604 16.8094 3.95532C17 4.3293 17 4.81912 17 5.7973V14.2031C17 15.1813 17 15.6704 16.8094 16.0444C16.6417 16.3737 16.3733 16.6417 16.044 16.8094C15.67 17 15.1809 17 14.2027 17"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                Выйти из аккаунта
+                            </a>
+                        </aside>
+                    </div>
+                    <div class="offset-xl-1 col-xl-9">
+                        <div class="account_page_panel">
+                            <div class="account_page_panel_title">
+                                Мои заказы
+                            </div>
+                            <div class="account_page_panel_stub" style="display: none;">
+                                <div class="account_page_panel_stub_text">
+                                    Ваш список заказов пока пуст.
+                                </div>
+                                <a href="#" class="account_page_panel_stub_link">
+                                    Перейти в каталог
+                                </a>
+                            </div>
+                            <div class="account_page_panel_content">
+                                <div class="account_page_panel_content_order">
+                                    <div class="account_page_panel_content_order_card">
+                                        <div class="account_page_panel_content_order_card_top">
+                                            <div class="account_page_panel_content_order_card_top_inform">
+                                                <div class="account_page_panel_content_order_card_top_inform_gallery">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_gallery_block">
+                                                        <img src="img/product_card-2.jpg" alt="Кашемировый джемпер"
+                                                            width="88" height="110" loading="lazy">
+                                                    </div>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_top_inform_list">
+                                                    <a href="#"
+                                                        class="account_page_panel_content_order_card_top_inform_list_title">
+                                                        Заказ №345
+                                                    </a>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_text">
+                                                        2 товара
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_status unpaid">
+                                                        ожидает оплаты
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_top_action">
+                                                <div class="account_page_panel_content_order_card_top_action_cost">
+                                                    89 095 руб
+                                                </div>
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_top_action_pay">
+                                                    Оплатить
+                                                </button>
+                                                <span class="account_page_panel_content_order_card_top_action_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M7.2 10.9333C7.6 11.4667 8.4 11.4667 8.8 10.9333L12.8 5.6C13.2944 4.94076 12.824 4 12 4H4C3.17595 4 2.70557 4.94076 3.2 5.6L7.2 10.9333Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="account_page_panel_content_order_card_bottom">
+                                            <div class="account_page_panel_content_order_card_bottom_title">
+                                                Данные о заказе
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_products">
+                                                <div class="account_page_panel_content_order_card_bottom_products_item">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_media">
+                                                        <img src="img/product_card-2.jpg" alt="Кашемировый джемпер"
+                                                            width="88" height="110" loading="lazy">
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_content">
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_title">
+                                                            Кашемировый джемпер
+                                                        </div>
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_meta">
+                                                            <span>Размер: M</span>
+                                                            <span>Цвет: Серый</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_price">
+                                                        1 x 64 800 руб
+                                                    </div>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_products_item">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_media">
+                                                        <img src="img/product_card-3.jpg" alt="Юбка" width="88"
+                                                            height="110" loading="lazy">
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_content">
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_title">
+                                                            Юбка
+                                                        </div>
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_meta">
+                                                            <span>Размер: L</span>
+                                                            <span>Цвет: Черный</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_price">
+                                                        1 x 22 400 руб
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_summary">
+                                                <div class="account_page_panel_content_order_card_bottom_summary_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Доставка
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        1895 руб
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="account_page_panel_content_order_card_bottom_summary_row total">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Итого
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        89 095 руб
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_details">
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Имя получателя
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        Кристина Стаканова
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Email
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        chrisoveroff@gmail.com
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Статус
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        принят, ожидает оплаты
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Служба доставки
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        СДЭК, посылка дверь-дверь
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Номер отправления
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value is-copy">
+                                                        <span>726382817380</span>
+                                                        <button type="button"
+                                                            class="account_page_panel_content_order_card_bottom_details_row_copy"
+                                                            aria-label="Скопировать номер отправления">
+                                                            <span
+                                                                class="account_page_panel_content_order_card_bottom_details_row_copy_message">
+                                                                Номер отправления скопирован
+                                                            </span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 20 20" fill="none">
+                                                                <path
+                                                                    d="M16.626 5.38867C16.8331 5.38871 17.001 5.55659 17.001 5.76367V15.9297C17.0009 16.4756 16.789 17.0011 16.4092 17.3896C16.029 17.7786 15.5112 17.998 14.9697 17.998H8.34473C7.80326 17.998 7.28551 17.7786 6.90527 17.3896C6.52542 17.0011 6.3136 16.4756 6.31348 15.9297V5.76367C6.31348 5.55657 6.48137 5.38867 6.68848 5.38867H16.626ZM7.06348 15.9297C7.0636 16.2821 7.20032 16.6186 7.44141 16.8652C7.68237 17.1117 8.0077 17.248 8.34473 17.248H14.9697C15.3067 17.248 15.6321 17.1117 15.873 16.8652C16.1141 16.6186 16.2509 16.2821 16.251 15.9297V6.13867H7.06348V15.9297ZM13.3125 2C13.5196 2.00004 13.6875 2.16792 13.6875 2.375C13.6875 2.58208 13.5196 2.74996 13.3125 2.75H3.75V13.3877C3.74999 13.5948 3.5821 13.7627 3.375 13.7627C3.1679 13.7627 3.00001 13.5948 3 13.3877V2.375C3 2.16789 3.16789 2 3.375 2H13.3125Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Дата заказа
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        04.06.2026
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_control">
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_bottom_control_cancel open-modal"
+                                                    data-modal="#cancel">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M16.1444 3.14646C16.3397 2.95118 16.6562 2.95118 16.8515 3.14646C17.0467 3.34173 17.0467 3.65822 16.8515 3.85349L10.705 9.99998L16.8505 16.1455C17.0452 16.3407 17.0453 16.6574 16.8505 16.8525C16.6554 17.0477 16.3387 17.0474 16.1435 16.8525L9.99894 10.707L3.85441 16.8525C3.65913 17.0474 3.34249 17.0477 3.14738 16.8525C2.95257 16.6574 2.95269 16.3407 3.14738 16.1455L9.29191 9.99998L3.1464 3.85349C2.9512 3.65822 2.9512 3.34173 3.1464 3.14646C3.34164 2.95118 3.65819 2.95118 3.85343 3.14646L9.99894 9.29197L16.1444 3.14646Z"
+                                                                fill="#979797" />
+                                                        </svg>
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_text">
+                                                        Отменить заказ
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="account_page_panel_content_order_card">
+                                        <div class="account_page_panel_content_order_card_top">
+                                            <div class="account_page_panel_content_order_card_top_inform">
+                                                <div class="account_page_panel_content_order_card_top_inform_gallery">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_gallery_block">
+                                                        <img src="img/product_card-1.jpg" alt="Платье-комбинация"
+                                                            width="88" height="110" loading="lazy">
+                                                    </div>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_top_inform_list">
+                                                    <a href="#"
+                                                        class="account_page_panel_content_order_card_top_inform_list_title">
+                                                        Заказ №346
+                                                    </a>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_text">
+                                                        1 товар
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_status received">
+                                                        получен
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_top_action">
+                                                <div class="account_page_panel_content_order_card_top_action_cost">
+                                                    28 900 руб
+                                                </div>
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_top_action_pay">
+                                                    Повторить заказ
+                                                </button>
+                                                <span class="account_page_panel_content_order_card_top_action_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M7.2 10.9333C7.6 11.4667 8.4 11.4667 8.8 10.9333L12.8 5.6C13.2944 4.94076 12.824 4 12 4H4C3.17595 4 2.70557 4.94076 3.2 5.6L7.2 10.9333Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="account_page_panel_content_order_card_bottom">
+                                            <div class="account_page_panel_content_order_card_bottom_title">
+                                                Данные о заказе
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_products">
+                                                <div class="account_page_panel_content_order_card_bottom_products_item">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_media">
+                                                        <img src="img/product_card-1.jpg" alt="Платье-комбинация"
+                                                            width="88" height="110" loading="lazy">
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_content">
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_title">
+                                                            Платье-комбинация
+                                                        </div>
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_meta">
+                                                            <span>Размер: S</span>
+                                                            <span>Цвет: Молочный</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_price">
+                                                        1 x 28 900 руб
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_summary">
+                                                <div class="account_page_panel_content_order_card_bottom_summary_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Доставка
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        Бесплатно
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_summary_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Итого
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        28 900 руб
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_details">
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Имя получателя
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        Кристина Стаканова
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Email
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        chrisoveroff@gmail.com
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Статус
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        получен
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Служба доставки
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        Курьерская доставка
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Номер отправления
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value is-copy">
+                                                        <span>483920174625</span>
+                                                        <button type="button"
+                                                            class="account_page_panel_content_order_card_bottom_details_row_copy"
+                                                            aria-label="Скопировать номер отправления">
+                                                            <span
+                                                                class="account_page_panel_content_order_card_bottom_details_row_copy_message">
+                                                                Номер отправления скопирован
+                                                            </span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 20 20" fill="none">
+                                                                <path
+                                                                    d="M16.626 5.38867C16.8331 5.38871 17.001 5.55659 17.001 5.76367V15.9297C17.0009 16.4756 16.789 17.0011 16.4092 17.3896C16.029 17.7786 15.5112 17.998 14.9697 17.998H8.34473C7.80326 17.998 7.28551 17.7786 6.90527 17.3896C6.52542 17.0011 6.3136 16.4756 6.31348 15.9297V5.76367C6.31348 5.55657 6.48137 5.38867 6.68848 5.38867H16.626ZM7.06348 15.9297C7.0636 16.2821 7.20032 16.6186 7.44141 16.8652C7.68237 17.1117 8.0077 17.248 8.34473 17.248H14.9697C15.3067 17.248 15.6321 17.1117 15.873 16.8652C16.1141 16.6186 16.2509 16.2821 16.251 15.9297V6.13867H7.06348V15.9297ZM13.3125 2C13.5196 2.00004 13.6875 2.16792 13.6875 2.375C13.6875 2.58208 13.5196 2.74996 13.3125 2.75H3.75V13.3877C3.74999 13.5948 3.5821 13.7627 3.375 13.7627C3.1679 13.7627 3.00001 13.5948 3 13.3877V2.375C3 2.16789 3.16789 2 3.375 2H13.3125Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Дата заказа
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        18.06.2026
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_control">
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_bottom_control_cancel open-modal"
+                                                    data-modal="#cancel">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M16.1444 3.14646C16.3397 2.95118 16.6562 2.95118 16.8515 3.14646C17.0467 3.34173 17.0467 3.65822 16.8515 3.85349L10.705 9.99998L16.8505 16.1455C17.0452 16.3407 17.0453 16.6574 16.8505 16.8525C16.6554 17.0477 16.3387 17.0474 16.1435 16.8525L9.99894 10.707L3.85441 16.8525C3.65913 17.0474 3.34249 17.0477 3.14738 16.8525C2.95257 16.6574 2.95269 16.3407 3.14738 16.1455L9.29191 9.99998L3.1464 3.85349C2.9512 3.65822 2.9512 3.34173 3.1464 3.14646C3.34164 2.95118 3.65819 2.95118 3.85343 3.14646L9.99894 9.29197L16.1444 3.14646Z"
+                                                                fill="#979797" />
+                                                        </svg>
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_text">
+                                                        Отменить заказ
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account_page_panel_content_out"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- footer %>

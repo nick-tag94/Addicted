@@ -359,6 +359,8 @@ html {
   background: #e7e7e7;
   border-radius: 0;
   max-width: 100%;
+  z-index: 5;
+  transform: translateY(3px);
 
   .swiper-scrollbar-drag {
     border-radius: 0;
@@ -895,7 +897,7 @@ html {
   position: fixed;
   left: 0;
   bottom: 20px;
-  z-index: 30;
+  z-index: 9;
   width: 100%;
   opacity: 0;
   visibility: hidden;

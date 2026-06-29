@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/src/scss/main-2v.scss" />
+    <link rel="stylesheet" href="/src/scss/main-3v.scss" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <section class="error_page">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xl-4 col-xl-4 offset-md-3 col-md-6">
+                        <div class="error_page_block">
+                            <h1 class="error_page_block_title">
+                                Страница не найдена
+                            </h1>
+                            <div class="error_page_block_text">
+                                Возможно, она была перемещена, удалена или ссылка
+                                больше не&nbsp;актуальна.
+                            </div>
+                            <a href="#" class="error_page_block_link">
+                                Перейти в каталог
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home_showcase">
+            <div class="container">
+                <div class="home_showcase_wrap row">
+                    <div class="col-xl-2 col-md-3">
+                        <div class="home_showcase_wrap_head">
+                            <h2 class="home_showcase_wrap_head_title">Новинки</h2>
+                            <div class="home_showcase_wrap_head_bottom">
+                                <div class="home_showcase_wrap_head_bottom_navigation sw_navigation">
+                                    <button type="button"
+                                        class="home_showcase_wrap_head_bottom_navigation_prev swiper-button-prev"
+                                        aria-label="Предыдущий слайд">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"
+                                            viewBox="0 0 24 21" fill="none">
+                                            <path d="M23.5 10.5L0.499999 10.5M10.3571 0.5L0.499999 10.5L10.3571 20.5"
+                                                stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                    <button type="button"
+                                        class="home_showcase_wrap_head_bottom_navigation_next swiper-button-next"
+                                        aria-label="Следующий слайд">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"
+                                            viewBox="0 0 24 21" fill="none">
+                                            <path d="M0.5 10.5H23.5M13.6429 20.5L23.5 10.5L13.6429 0.5" stroke="black"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="home_showcase_wrap_head_bottom_scrollbar swiper-scrollbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10 col-md-9">
+                        <div class="home_showcase_wrap_slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide home_showcase_wrap_slider_card">
+                                    <a href="#" class="product_card">
+                                        <div class="product_card_media">
+                                            <img src="img/product_card-1.jpg" alt="Синий трикотажный топ" width="607"
+                                                height="806" loading="lazy">
+                                        </div>
+                                        <div class="product_card_content">
+                                            <h3 class="product_card_content_title">Синий трикотажный топ</h3>
+                                            <div class="product_card_content_prices">
+                                                <span class="product_card_content_prices_price">12 900 ₽</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide home_showcase_wrap_slider_card">
+                                    <a href="#" class="product_card">
+                                        <div class="product_card_media">
+                                            <img src="img/product_card-2.jpg" alt="Хлопковый вязаный комплект"
+                                                width="607" height="806" loading="lazy">
+                                        </div>
+                                        <div class="product_card_content">
+                                            <h3 class="product_card_content_title">Хлопковый вязаный комплект</h3>
+                                            <div class="product_card_content_prices">
+                                                <span class="product_card_content_prices_price">21 500 ₽</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide home_showcase_wrap_slider_card">
+                                    <a href="#" class="product_card">
+                                        <div class="product_card_media">
+                                            <img src="img/product_card-3.jpg" alt="Белая хлопковая майка" width="607"
+                                                height="806" loading="lazy">
+                                        </div>
+                                        <div class="product_card_content">
+                                            <h3 class="product_card_content_title">Белая хлопковая майка</h3>
+                                            <div class="product_card_content_prices">
+                                                <span class="product_card_content_prices_price">9 800 ₽</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- footer %>

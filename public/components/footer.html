@@ -779,6 +779,503 @@
   </div>
 </div>
 
+<div class="modals typ_account" id="account" data-lenis-prevent>
+  <div class="content">
+    <div class="typ_account_wrap">
+      <a class="close-modal" data-modal="#account" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path
+            d="M21.1444 8.14646C21.3397 7.95118 21.6562 7.95118 21.8515 8.14646C22.0467 8.34173 22.0467 8.65822 21.8515 8.85349L15.705 15L21.8505 21.1455C22.0452 21.3407 22.0453 21.6574 21.8505 21.8525C21.6554 22.0477 21.3387 22.0474 21.1435 21.8525L14.9989 15.707L8.85441 21.8525C8.65913 22.0474 8.34249 22.0477 8.14738 21.8525C7.95257 21.6574 7.95269 21.3407 8.14738 21.1455L14.2919 15L8.1464 8.85349C7.9512 8.65822 7.9512 8.34173 8.1464 8.14646C8.34164 7.95118 8.65819 7.95118 8.85343 8.14646L14.9989 14.292L21.1444 8.14646Z"
+            fill="black" />
+        </svg>
+      </a>
+      <div class="typ_account_wrap_gallery">
+        <img src="img/account.jpg" alt="" width="452" height="444" loading="lazy">
+      </div>
+      <div class="typ_account_wrap_form">
+        <div class="typ_account_wrap_form_block">
+          <div class="typ_account_wrap_form_block_title">
+            Войти
+          </div>
+          <form action="" method="post" class="custom_form" id="account-login-form">
+            <div class="custom_form_item is-text" data-error-required="Введите email"
+              data-error-invalid="Введите корректный email">
+              <input type="email" name="email" value="" required autocomplete="email" placeholder="Email">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите email</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-password" data-error-required="Введите пароль">
+              <input type="password" name="password" value="" required autocomplete="current-password"
+                placeholder="Пароль">
+              <button type="button" class="is-password-show">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                  <path
+                    d="M1.20035 0.379514C1.13515 0.227014 1.01204 0.106661 0.858103 0.0449303C0.704167 -0.0168004 0.532013 -0.0148519 0.379514 0.0503472C0.227014 0.115546 0.106661 0.238655 0.0449303 0.392591C-0.0168004 0.546527 -0.0148519 0.718681 0.0503471 0.871181L1.20035 0.379514ZM6.49285 6.24035C6.53949 6.17159 6.57196 6.09423 6.58835 6.01277C6.60474 5.93132 6.60473 5.84742 6.58831 5.76597C6.57189 5.68453 6.5394 5.60717 6.49274 5.53843C6.44607 5.46969 6.38617 5.41094 6.31653 5.36562C6.24689 5.32031 6.16892 5.28933 6.08717 5.2745C6.00541 5.25968 5.92153 5.2613 5.84041 5.27927C5.75929 5.29725 5.68258 5.33122 5.61474 5.37919C5.54691 5.42717 5.48932 5.48819 5.44535 5.55868L6.49285 6.24035ZM4.26785 7.36785C4.22309 7.43668 4.19233 7.51366 4.17732 7.59438C4.16231 7.67511 4.16334 7.75799 4.18037 7.83832C4.21475 8.00054 4.31216 8.14245 4.45118 8.23285C4.5902 8.32324 4.75943 8.35471 4.92165 8.32033C5.00197 8.3033 5.07816 8.27063 5.14585 8.22416C5.21354 8.17769 5.27142 8.11835 5.31618 8.04951L4.26785 7.36785ZM17.867 0.871181C17.9252 0.72021 17.9226 0.552555 17.8597 0.403476C17.7968 0.254398 17.6786 0.135514 17.5298 0.0718311C17.3811 0.00814769 17.2135 0.00462698 17.0622 0.0620098C16.9109 0.119393 16.7878 0.233207 16.7187 0.379514L17.867 0.871181ZM15.6003 5.75868C15.6576 5.82009 15.7266 5.86934 15.8032 5.9035C15.8799 5.93766 15.9627 5.95603 16.0466 5.95751C16.1305 5.95899 16.2139 5.94355 16.2917 5.91212C16.3695 5.88068 16.4402 5.83389 16.4995 5.77455C16.5589 5.7152 16.6057 5.6445 16.6371 5.56668C16.6685 5.48886 16.684 5.4055 16.6825 5.32158C16.681 5.23766 16.6627 5.1549 16.6285 5.07823C16.5943 5.00157 16.5451 4.93257 16.4837 4.87535L15.6003 5.75868ZM8.33368 8.54201C8.33368 8.70778 8.39953 8.86675 8.51674 8.98396C8.63395 9.10117 8.79292 9.16701 8.95868 9.16701C9.12444 9.16701 9.28341 9.10117 9.40062 8.98396C9.51783 8.86675 9.58368 8.70778 9.58368 8.54201H8.33368ZM12.6012 8.04951C12.6916 8.18853 12.8335 8.28595 12.9957 8.32033C13.1579 8.35471 13.3272 8.32324 13.4662 8.23285C13.6052 8.14245 13.7026 8.00054 13.737 7.83832C13.7714 7.6761 13.7399 7.50687 13.6495 7.36785L12.6012 8.04951ZM3.56785 4.50785C3.67814 4.38927 3.73809 4.2325 3.73509 4.07059C3.73208 3.90867 3.66634 3.75424 3.55172 3.63984C3.4371 3.52543 3.28255 3.45999 3.12063 3.45728C2.9587 3.45458 2.80205 3.51483 2.68368 3.62535L3.56785 4.50785ZM1.43368 4.87451C1.32328 4.99299 1.26318 5.1497 1.26603 5.31162C1.26889 5.47353 1.33448 5.62802 1.449 5.74253C1.56351 5.85704 1.71799 5.92264 1.87991 5.92549C2.04183 5.92835 2.19853 5.86825 2.31701 5.75785L1.43368 4.87451ZM8.95868 5.83368C6.27201 5.83368 4.34285 4.49618 3.06285 3.11701C2.52494 2.53501 2.04956 1.8982 1.64451 1.21701C1.49199 0.960669 1.35102 0.697628 1.22201 0.428681L1.20368 0.387847L1.20035 0.379514L1.19951 0.378681L0.625347 0.625347L0.0503471 0.871181L0.0511805 0.872014L0.0520139 0.874514L0.0545139 0.879514L0.0878472 0.952847C0.109514 1.00174 0.142014 1.06924 0.185347 1.15535C0.27118 1.32701 0.39868 1.56868 0.570347 1.85618C0.912014 2.43118 1.43285 3.19785 2.14618 3.96701C3.57535 5.50451 5.81201 7.08368 8.95868 7.08368V5.83368ZM11.7195 5.31785C10.9112 5.63701 9.99368 5.83368 8.95868 5.83368V7.08368C10.157 7.08368 11.2295 6.85368 12.177 6.48118L11.7195 5.31785ZM5.44535 5.55868L4.26785 7.36785L5.31618 8.04868L6.49285 6.24035L5.44535 5.55868ZM17.292 0.625347L16.717 0.378681H16.7178V0.380347L16.712 0.39118L16.6887 0.442847C16.5289 0.775212 16.3508 1.09848 16.1553 1.41118C15.6548 2.21795 15.0526 2.95706 14.3637 3.61035L15.2195 4.52201C16.2926 3.50424 17.1738 2.30177 17.8212 0.972014L17.8537 0.90118L17.862 0.881181L17.8653 0.875347V0.872847L17.8662 0.872014L17.292 0.625347ZM14.3637 3.61035C13.647 4.28201 12.7703 4.90368 11.7195 5.31785L12.177 6.48118C13.4045 5.99785 14.4145 5.27785 15.2195 4.52201L14.3637 3.61035ZM14.3503 4.50785L15.6003 5.75868L16.4837 4.87451L15.2337 3.62451L14.3503 4.50785ZM8.33368 6.45868V8.54201H9.58368V6.45868H8.33368ZM11.4245 6.24035L12.6012 8.04951L13.6495 7.36785L12.472 5.55868L11.4245 6.24035ZM2.68285 3.62368L1.43285 4.87368L2.31701 5.75785L3.56701 4.50868L2.68285 3.62368Z"
+                    fill="#979797" />
+                </svg>
+              </button>
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите пароль</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-forgot">
+              <button type="button" class="is-forgot-btn open-modal" data-modal="#recovery">
+                Забыли пароль?
+              </button>
+            </div>
+            <div class="custom_form_item is-action">
+              <input type="submit" class="custom_form_item_btn --dark" value="Войти">
+              <button type="button" class="custom_form_item_btn --gray open-modal" data-modal="#registration">
+                Зарегистрироваться
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modals typ_registration" id="registration" data-lenis-prevent>
+  <div class="content">
+    <div class="typ_registration_wrap">
+      <a class="close-modal" data-modal="#registration" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path
+            d="M21.1444 8.14646C21.3397 7.95118 21.6562 7.95118 21.8515 8.14646C22.0467 8.34173 22.0467 8.65822 21.8515 8.85349L15.705 15L21.8505 21.1455C22.0452 21.3407 22.0453 21.6574 21.8505 21.8525C21.6554 22.0477 21.3387 22.0474 21.1435 21.8525L14.9989 15.707L8.85441 21.8525C8.65913 22.0474 8.34249 22.0477 8.14738 21.8525C7.95257 21.6574 7.95269 21.3407 8.14738 21.1455L14.2919 15L8.1464 8.85349C7.9512 8.65822 7.9512 8.34173 8.1464 8.14646C8.34164 7.95118 8.65819 7.95118 8.85343 8.14646L14.9989 14.292L21.1444 8.14646Z"
+            fill="black" />
+        </svg>
+      </a>
+      <div class="typ_registration_wrap_gallery">
+        <img src="img/registration.jpg" alt="" width="452" height="704" loading="lazy">
+      </div>
+      <div class="typ_registration_wrap_form">
+        <div class="typ_registration_wrap_form_block">
+          <div class="typ_registration_wrap_form_block_title">
+            Регистрация
+          </div>
+          <form action="" method="post" class="custom_form" id="account-register-form">
+            <div class="custom_form_item is-text" data-error-required="Введите имя">
+              <input type="text" name="first_name" value="" required autocomplete="given-name" placeholder="Имя">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите имя</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-text" data-error-required="Введите фамилию">
+              <input type="text" name="last_name" value="" required autocomplete="family-name" placeholder="Фамилия">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите фамилию</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-text" data-error-required="Введите email"
+              data-error-invalid="Введите корректный email">
+              <input type="email" name="email" value="" required autocomplete="email" placeholder="Email">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите email</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-password" data-error-required="Введите пароль">
+              <input type="password" name="password" value="" required autocomplete="new-password" placeholder="Пароль">
+              <button type="button" class="is-password-show">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                  <path
+                    d="M1.20035 0.379514C1.13515 0.227014 1.01204 0.106661 0.858103 0.0449303C0.704167 -0.0168004 0.532013 -0.0148519 0.379514 0.0503472C0.227014 0.115546 0.106661 0.238655 0.0449303 0.392591C-0.0168004 0.546527 -0.0148519 0.718681 0.0503471 0.871181L1.20035 0.379514ZM6.49285 6.24035C6.53949 6.17159 6.57196 6.09423 6.58835 6.01277C6.60474 5.93132 6.60473 5.84742 6.58831 5.76597C6.57189 5.68453 6.5394 5.60717 6.49274 5.53843C6.44607 5.46969 6.38617 5.41094 6.31653 5.36562C6.24689 5.32031 6.16892 5.28933 6.08717 5.2745C6.00541 5.25968 5.92153 5.2613 5.84041 5.27927C5.75929 5.29725 5.68258 5.33122 5.61474 5.37919C5.54691 5.42717 5.48932 5.48819 5.44535 5.55868L6.49285 6.24035ZM4.26785 7.36785C4.22309 7.43668 4.19233 7.51366 4.17732 7.59438C4.16231 7.67511 4.16334 7.75799 4.18037 7.83832C4.21475 8.00054 4.31216 8.14245 4.45118 8.23285C4.5902 8.32324 4.75943 8.35471 4.92165 8.32033C5.00197 8.3033 5.07816 8.27063 5.14585 8.22416C5.21354 8.17769 5.27142 8.11835 5.31618 8.04951L4.26785 7.36785ZM17.867 0.871181C17.9252 0.72021 17.9226 0.552555 17.8597 0.403476C17.7968 0.254398 17.6786 0.135514 17.5298 0.0718311C17.3811 0.00814769 17.2135 0.00462698 17.0622 0.0620098C16.9109 0.119393 16.7878 0.233207 16.7187 0.379514L17.867 0.871181ZM15.6003 5.75868C15.6576 5.82009 15.7266 5.86934 15.8032 5.9035C15.8799 5.93766 15.9627 5.95603 16.0466 5.95751C16.1305 5.95899 16.2139 5.94355 16.2917 5.91212C16.3695 5.88068 16.4402 5.83389 16.4995 5.77455C16.5589 5.7152 16.6057 5.6445 16.6371 5.56668C16.6685 5.48886 16.684 5.4055 16.6825 5.32158C16.681 5.23766 16.6627 5.1549 16.6285 5.07823C16.5943 5.00157 16.5451 4.93257 16.4837 4.87535L15.6003 5.75868ZM8.33368 8.54201C8.33368 8.70778 8.39953 8.86675 8.51674 8.98396C8.63395 9.10117 8.79292 9.16701 8.95868 9.16701C9.12444 9.16701 9.28341 9.10117 9.40062 8.98396C9.51783 8.86675 9.58368 8.70778 9.58368 8.54201H8.33368ZM12.6012 8.04951C12.6916 8.18853 12.8335 8.28595 12.9957 8.32033C13.1579 8.35471 13.3272 8.32324 13.4662 8.23285C13.6052 8.14245 13.7026 8.00054 13.737 7.83832C13.7714 7.6761 13.7399 7.50687 13.6495 7.36785L12.6012 8.04951ZM3.56785 4.50785C3.67814 4.38927 3.73809 4.2325 3.73509 4.07059C3.73208 3.90867 3.66634 3.75424 3.55172 3.63984C3.4371 3.52543 3.28255 3.45999 3.12063 3.45728C2.9587 3.45458 2.80205 3.51483 2.68368 3.62535L3.56785 4.50785ZM1.43368 4.87451C1.32328 4.99299 1.26318 5.1497 1.26603 5.31162C1.26889 5.47353 1.33448 5.62802 1.449 5.74253C1.56351 5.85704 1.71799 5.92264 1.87991 5.92549C2.04183 5.92835 2.19853 5.86825 2.31701 5.75785L1.43368 4.87451ZM8.95868 5.83368C6.27201 5.83368 4.34285 4.49618 3.06285 3.11701C2.52494 2.53501 2.04956 1.8982 1.64451 1.21701C1.49199 0.960669 1.35102 0.697628 1.22201 0.428681L1.20368 0.387847L1.20035 0.379514L1.19951 0.378681L0.625347 0.625347L0.0503471 0.871181L0.0511805 0.872014L0.0520139 0.874514L0.0545139 0.879514L0.0878472 0.952847C0.109514 1.00174 0.142014 1.06924 0.185347 1.15535C0.27118 1.32701 0.39868 1.56868 0.570347 1.85618C0.912014 2.43118 1.43285 3.19785 2.14618 3.96701C3.57535 5.50451 5.81201 7.08368 8.95868 7.08368V5.83368ZM11.7195 5.31785C10.9112 5.63701 9.99368 5.83368 8.95868 5.83368V7.08368C10.157 7.08368 11.2295 6.85368 12.177 6.48118L11.7195 5.31785ZM5.44535 5.55868L4.26785 7.36785L5.31618 8.04868L6.49285 6.24035L5.44535 5.55868ZM17.292 0.625347L16.717 0.378681H16.7178V0.380347L16.712 0.39118L16.6887 0.442847C16.5289 0.775212 16.3508 1.09848 16.1553 1.41118C15.6548 2.21795 15.0526 2.95706 14.3637 3.61035L15.2195 4.52201C16.2926 3.50424 17.1738 2.30177 17.8212 0.972014L17.8537 0.90118L17.862 0.881181L17.8653 0.875347V0.872847L17.8662 0.872014L17.292 0.625347ZM14.3637 3.61035C13.647 4.28201 12.7703 4.90368 11.7195 5.31785L12.177 6.48118C13.4045 5.99785 14.4145 5.27785 15.2195 4.52201L14.3637 3.61035ZM14.3503 4.50785L15.6003 5.75868L16.4837 4.87451L15.2337 3.62451L14.3503 4.50785ZM8.33368 6.45868V8.54201H9.58368V6.45868H8.33368ZM11.4245 6.24035L12.6012 8.04951L13.6495 7.36785L12.472 5.55868L11.4245 6.24035ZM2.68285 3.62368L1.43285 4.87368L2.31701 5.75785L3.56701 4.50868L2.68285 3.62368Z"
+                    fill="#979797" />
+                </svg>
+              </button>
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите пароль</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-password" data-error-required="Подтвердите пароль">
+              <input type="password" name="password_confirmation" value="" required autocomplete="new-password"
+                placeholder="Подтверждение пароля">
+              <button type="button" class="is-password-show">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none">
+                  <path
+                    d="M1.20035 0.379514C1.13515 0.227014 1.01204 0.106661 0.858103 0.0449303C0.704167 -0.0168004 0.532013 -0.0148519 0.379514 0.0503472C0.227014 0.115546 0.106661 0.238655 0.0449303 0.392591C-0.0168004 0.546527 -0.0148519 0.718681 0.0503471 0.871181L1.20035 0.379514ZM6.49285 6.24035C6.53949 6.17159 6.57196 6.09423 6.58835 6.01277C6.60474 5.93132 6.60473 5.84742 6.58831 5.76597C6.57189 5.68453 6.5394 5.60717 6.49274 5.53843C6.44607 5.46969 6.38617 5.41094 6.31653 5.36562C6.24689 5.32031 6.16892 5.28933 6.08717 5.2745C6.00541 5.25968 5.92153 5.2613 5.84041 5.27927C5.75929 5.29725 5.68258 5.33122 5.61474 5.37919C5.54691 5.42717 5.48932 5.48819 5.44535 5.55868L6.49285 6.24035ZM4.26785 7.36785C4.22309 7.43668 4.19233 7.51366 4.17732 7.59438C4.16231 7.67511 4.16334 7.75799 4.18037 7.83832C4.21475 8.00054 4.31216 8.14245 4.45118 8.23285C4.5902 8.32324 4.75943 8.35471 4.92165 8.32033C5.00197 8.3033 5.07816 8.27063 5.14585 8.22416C5.21354 8.17769 5.27142 8.11835 5.31618 8.04951L4.26785 7.36785ZM17.867 0.871181C17.9252 0.72021 17.9226 0.552555 17.8597 0.403476C17.7968 0.254398 17.6786 0.135514 17.5298 0.0718311C17.3811 0.00814769 17.2135 0.00462698 17.0622 0.0620098C16.9109 0.119393 16.7878 0.233207 16.7187 0.379514L17.867 0.871181ZM15.6003 5.75868C15.6576 5.82009 15.7266 5.86934 15.8032 5.9035C15.8799 5.93766 15.9627 5.95603 16.0466 5.95751C16.1305 5.95899 16.2139 5.94355 16.2917 5.91212C16.3695 5.88068 16.4402 5.83389 16.4995 5.77455C16.5589 5.7152 16.6057 5.6445 16.6371 5.56668C16.6685 5.48886 16.684 5.4055 16.6825 5.32158C16.681 5.23766 16.6627 5.1549 16.6285 5.07823C16.5943 5.00157 16.5451 4.93257 16.4837 4.87535L15.6003 5.75868ZM8.33368 8.54201C8.33368 8.70778 8.39953 8.86675 8.51674 8.98396C8.63395 9.10117 8.79292 9.16701 8.95868 9.16701C9.12444 9.16701 9.28341 9.10117 9.40062 8.98396C9.51783 8.86675 9.58368 8.70778 9.58368 8.54201H8.33368ZM12.6012 8.04951C12.6916 8.18853 12.8335 8.28595 12.9957 8.32033C13.1579 8.35471 13.3272 8.32324 13.4662 8.23285C13.6052 8.14245 13.7026 8.00054 13.737 7.83832C13.7714 7.6761 13.7399 7.50687 13.6495 7.36785L12.6012 8.04951ZM3.56785 4.50785C3.67814 4.38927 3.73809 4.2325 3.73509 4.07059C3.73208 3.90867 3.66634 3.75424 3.55172 3.63984C3.4371 3.52543 3.28255 3.45999 3.12063 3.45728C2.9587 3.45458 2.80205 3.51483 2.68368 3.62535L3.56785 4.50785ZM1.43368 4.87451C1.32328 4.99299 1.26318 5.1497 1.26603 5.31162C1.26889 5.47353 1.33448 5.62802 1.449 5.74253C1.56351 5.85704 1.71799 5.92264 1.87991 5.92549C2.04183 5.92835 2.19853 5.86825 2.31701 5.75785L1.43368 4.87451ZM8.95868 5.83368C6.27201 5.83368 4.34285 4.49618 3.06285 3.11701C2.52494 2.53501 2.04956 1.8982 1.64451 1.21701C1.49199 0.960669 1.35102 0.697628 1.22201 0.428681L1.20368 0.387847L1.20035 0.379514L1.19951 0.378681L0.625347 0.625347L0.0503471 0.871181L0.0511805 0.872014L0.0520139 0.874514L0.0545139 0.879514L0.0878472 0.952847C0.109514 1.00174 0.142014 1.06924 0.185347 1.15535C0.27118 1.32701 0.39868 1.56868 0.570347 1.85618C0.912014 2.43118 1.43285 3.19785 2.14618 3.96701C3.57535 5.50451 5.81201 7.08368 8.95868 7.08368V5.83368ZM11.7195 5.31785C10.9112 5.63701 9.99368 5.83368 8.95868 5.83368V7.08368C10.157 7.08368 11.2295 6.85368 12.177 6.48118L11.7195 5.31785ZM5.44535 5.55868L4.26785 7.36785L5.31618 8.04868L6.49285 6.24035L5.44535 5.55868ZM17.292 0.625347L16.717 0.378681H16.7178V0.380347L16.712 0.39118L16.6887 0.442847C16.5289 0.775212 16.3508 1.09848 16.1553 1.41118C15.6548 2.21795 15.0526 2.95706 14.3637 3.61035L15.2195 4.52201C16.2926 3.50424 17.1738 2.30177 17.8212 0.972014L17.8537 0.90118L17.862 0.881181L17.8653 0.875347V0.872847L17.8662 0.872014L17.292 0.625347ZM14.3637 3.61035C13.647 4.28201 12.7703 4.90368 11.7195 5.31785L12.177 6.48118C13.4045 5.99785 14.4145 5.27785 15.2195 4.52201L14.3637 3.61035ZM14.3503 4.50785L15.6003 5.75868L16.4837 4.87451L15.2337 3.62451L14.3503 4.50785ZM8.33368 6.45868V8.54201H9.58368V6.45868H8.33368ZM11.4245 6.24035L12.6012 8.04951L13.6495 7.36785L12.472 5.55868L11.4245 6.24035ZM2.68285 3.62368L1.43285 4.87368L2.31701 5.75785L3.56701 4.50868L2.68285 3.62368Z"
+                    fill="#979797" />
+                </svg>
+              </button>
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Подтвердите пароль</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-check" data-error-required="Подтвердите согласие на обработку данных">
+              <label class="is-check-agreement">
+                <input type="checkbox" name="user_consent" id="user-consent-checkbox" value="1" required>
+                <span class="is-check-agreement_text">
+                  Я ознакомился (-ась) с <a href="#">политикой конфиденциальности</a> и согласен на обработку <a
+                    href="#">персональных данных</a>
+                </span>
+              </label>
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Подтвердите согласие на обработку данных</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-action">
+              <input type="submit" class="custom_form_item_btn --dark" value="Зарегистрироваться">
+              <button type="button" class="custom_form_item_btn --gray open-modal" data-modal="#account">
+                у меня есть аккаунт
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modals typ_recovery" id="recovery" data-lenis-prevent>
+  <div class="content">
+    <div class="typ_recovery_wrap">
+      <a class="close-modal" data-modal="#recovery" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path
+            d="M21.1444 8.14646C21.3397 7.95118 21.6562 7.95118 21.8515 8.14646C22.0467 8.34173 22.0467 8.65822 21.8515 8.85349L15.705 15L21.8505 21.1455C22.0452 21.3407 22.0453 21.6574 21.8505 21.8525C21.6554 22.0477 21.3387 22.0474 21.1435 21.8525L14.9989 15.707L8.85441 21.8525C8.65913 22.0474 8.34249 22.0477 8.14738 21.8525C7.95257 21.6574 7.95269 21.3407 8.14738 21.1455L14.2919 15L8.1464 8.85349C7.9512 8.65822 7.9512 8.34173 8.1464 8.14646C8.34164 7.95118 8.65819 7.95118 8.85343 8.14646L14.9989 14.292L21.1444 8.14646Z"
+            fill="black" />
+        </svg>
+      </a>
+      <div class="typ_recovery_wrap_form">
+        <div class="typ_recovery_wrap_form_block">
+          <div class="typ_recovery_wrap_form_block_title">
+            Восстановление пароля
+          </div>
+          <form action="" method="post" class="custom_form" id="account-recovery-form">
+            <div class="custom_form_item is-text" data-error-required="Введите email"
+              data-error-invalid="Введите корректный email">
+              <input type="email" name="email" value="" required autocomplete="email" placeholder="Email">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите email</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-captcha" data-error-required="Введите слово с картинки">
+              <div class="custom_form_item_label">
+                Введите слово на картинке
+              </div>
+              <div class="custom_form_item_block">
+                <img src="img/captcha.png" alt="Капча">
+              </div>
+              <input type="text" name="captcha" value="" required autocomplete="off" autocapitalize="off"
+                autocorrect="off" spellcheck="false">
+              <div class="custom_form_item_error" aria-hidden="true">
+                <div class="custom_form_item_error_tooltip">Введите слово с картинки</div>
+                <div class="custom_form_item_error_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path
+                      d="M6.21349 1.10533C6.9506 -0.368439 9.05353 -0.368447 9.79064 1.10533L15.7906 13.1073C16.4551 14.437 15.4881 16.0008 14.0016 16.0008H2.00255C0.51598 16.0008 -0.450941 14.437 0.213489 13.1073L6.21349 1.10533ZM7.0797 11.5819V13.2303H8.92638V11.5819H7.0797ZM7.13634 3.99302V6.6522L7.57677 10.6737H8.41564L8.86974 6.63951V3.99302H7.13634Z"
+                      fill="#D22D2D" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="custom_form_item is-action">
+              <input type="submit" class="custom_form_item_btn --dark" value="Отправить">
+              <button type="button" class="custom_form_item_btn --gray open-modal" data-modal="#account">
+                Вернуться назад
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="search_modal">
+  <div class="search_modal_wrap">
+    <div class="container">
+      <div class="row search_modal_wrap_row">
+        <div class="col-xl-12">
+          <div class="search_modal_wrap_head">
+            <div class="search_modal_wrap_head_title">
+              Поиск
+            </div>
+            <button type="button" class="search_modal_wrap_head_btn">
+              <span class="search_modal_wrap_head_btn_text">
+                Закрыть
+              </span>
+              <span class="search_modal_wrap_head_btn_icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path
+                    d="M10 10.6948L4.85182 15.843C4.76022 15.9346 4.64769 15.9836 4.51423 15.9902C4.38077 15.9967 4.26169 15.9477 4.15702 15.843C4.05234 15.7383 4 15.6225 4 15.4956C4 15.3687 4.05234 15.2529 4.15702 15.1482L9.3052 10L4.15702 4.85182C4.06542 4.76022 4.01636 4.64769 4.00981 4.51423C4.00327 4.38077 4.05234 4.26169 4.15702 4.15702C4.26169 4.05234 4.37749 4 4.50442 4C4.63134 4 4.74714 4.05234 4.85182 4.15702L10 9.3052L15.1482 4.15702C15.2398 4.06542 15.3526 4.01636 15.4868 4.00981C15.6196 4.00327 15.7383 4.05234 15.843 4.15702C15.9477 4.26169 16 4.37749 16 4.50442C16 4.63134 15.9477 4.74714 15.843 4.85182L10.6948 10L15.843 15.1482C15.9346 15.2398 15.9836 15.3526 15.9902 15.4868C15.9967 15.6196 15.9477 15.7383 15.843 15.843C15.7383 15.9477 15.6225 16 15.4956 16C15.3687 16 15.2529 15.9477 15.1482 15.843L10 10.6948Z"
+                    fill="black" />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <div class="offset-xl-2 col-xl-8 search_modal_wrap_content" data-lenis-prevent>
+          <div class="search_modal_wrap_line">
+            <form action="/search/" method="get" class="search_modal_wrap_line_form" role="search"
+              aria-label="Поиск по каталогу">
+              <div class="search_modal_wrap_line_form_text">
+                <input id="search-modal-field" type="search" name="q" value="" placeholder="ПОИСК" autocomplete="off"
+                  inputmode="search" aria-label="Поиск по каталогу" aria-describedby="search-modal-submit">
+                <span class="search_modal_wrap_line_form_text_icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path
+                      d="M12.6667 12.6667L18 18M8.22222 14.4444C4.78578 14.4444 2 11.6587 2 8.22222C2 4.78578 4.78578 2 8.22222 2C11.6587 2 14.4444 4.78578 14.4444 8.22222C14.4444 11.6587 11.6587 14.4444 8.22222 14.4444Z"
+                      stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+              </div>
+              <button type="submit" class="search_modal_wrap_line_form_btn" id="search-modal-submit">
+                Найти
+              </button>
+            </form>
+          </div>
+          <div class="search_modal_wrap_body">
+            <div class="search_modal_wrap_body_inform">
+              <div class="search_modal_wrap_body_inform_block">
+                <div class="search_modal_wrap_body_inform_block_title">
+                  Часто ищут
+                </div>
+                <div class="search_modal_wrap_body_inform_block_list">
+                  <button type="button" class="search_modal_wrap_body_inform_block_list_result">
+                    <span class="search_modal_wrap_body_inform_block_list_result_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                        <path
+                          d="M11.1667 11.1667L16.5 16.5M6.72222 12.9444C3.28578 12.9444 0.5 10.1587 0.5 6.72222C0.5 3.28578 3.28578 0.5 6.72222 0.5C10.1587 0.5 12.9444 3.28578 12.9444 6.72222C12.9444 10.1587 10.1587 12.9444 6.72222 12.9444Z"
+                          stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    кашемир
+                  </button>
+                  <button type="button" class="search_modal_wrap_body_inform_block_list_result">
+                    <span class="search_modal_wrap_body_inform_block_list_result_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                        <path
+                          d="M11.1667 11.1667L16.5 16.5M6.72222 12.9444C3.28578 12.9444 0.5 10.1587 0.5 6.72222C0.5 3.28578 3.28578 0.5 6.72222 0.5C10.1587 0.5 12.9444 3.28578 12.9444 6.72222C12.9444 10.1587 10.1587 12.9444 6.72222 12.9444Z"
+                          stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    джемпер
+                  </button>
+                  <button type="button" class="search_modal_wrap_body_inform_block_list_result">
+                    <span class="search_modal_wrap_body_inform_block_list_result_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                        <path
+                          d="M11.1667 11.1667L16.5 16.5M6.72222 12.9444C3.28578 12.9444 0.5 10.1587 0.5 6.72222C0.5 3.28578 3.28578 0.5 6.72222 0.5C10.1587 0.5 12.9444 3.28578 12.9444 6.72222C12.9444 10.1587 10.1587 12.9444 6.72222 12.9444Z"
+                          stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    кардиган
+                  </button>
+                  <button type="button" class="search_modal_wrap_body_inform_block_list_result">
+                    <span class="search_modal_wrap_body_inform_block_list_result_icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+                        <path
+                          d="M11.1667 11.1667L16.5 16.5M6.72222 12.9444C3.28578 12.9444 0.5 10.1587 0.5 6.72222C0.5 3.28578 3.28578 0.5 6.72222 0.5C10.1587 0.5 12.9444 3.28578 12.9444 6.72222C12.9444 10.1587 10.1587 12.9444 6.72222 12.9444Z"
+                          stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                    футболка
+                  </button>
+                </div>
+              </div>
+              <div class="search_modal_wrap_body_inform_navigation">
+                <div class="search_modal_wrap_body_inform_navigation_line sw_navigation">
+                  <button type="button" class="search_modal_wrap_body_inform_navigationline_prev swiper-button-prev"
+                    aria-label="Предыдущий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M23.5 10.5L0.499999 10.5M10.3571 0.5L0.499999 10.5L10.3571 20.5" stroke="#000"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <button type="button" class="search_modal_wrap_body_inform_navigationline_next swiper-button-next"
+                    aria-label="Следующий слайд">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21" viewBox="0 0 24 21" fill="none">
+                      <path d="M0.5 10.5H23.5M13.6429 20.5L23.5 10.5L13.6429 0.5" stroke="black" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="search_modal_wrap_body_inform_navigation_scrollbar swiper-scrollbar"></div>
+              </div>
+            </div>
+            <div class="search_modal_wrap_body_content">
+              <div class="search_modal_wrap_body_content_title">
+                Новинки
+              </div>
+              <div class="search_modal_wrap_body_content_slider swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide search_modal_wrap_body_content_slider_card">
+                    <a href="#" class="product_card">
+                      <div class="product_card_media">
+                        <img src="img/product_card-1.jpg" alt="Синий трикотажный топ" width="607" height="806"
+                          loading="lazy">
+                      </div>
+                      <div class="product_card_content">
+                        <h3 class="product_card_content_title">Синий трикотажный топ</h3>
+                        <div class="product_card_content_prices">
+                          <span class="product_card_content_prices_price">12 900 ₽</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide search_modal_wrap_body_content_slider_card">
+                    <a href="#" class="product_card">
+                      <div class="product_card_media">
+                        <img src="img/product_card-2.jpg" alt="Хлопковый вязаный комплект" width="607" height="806"
+                          loading="lazy">
+                      </div>
+                      <div class="product_card_content">
+                        <h3 class="product_card_content_title">Хлопковый вязаный комплект</h3>
+                        <div class="product_card_content_prices">
+                          <span class="product_card_content_prices_price">21 500 ₽</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide search_modal_wrap_body_content_slider_card">
+                    <a href="#" class="product_card">
+                      <div class="product_card_media">
+                        <img src="img/product_card-3.jpg" alt="Белая хлопковая майка" width="607" height="806"
+                          loading="lazy">
+                      </div>
+                      <div class="product_card_content">
+                        <h3 class="product_card_content_title">Белая хлопковая майка</h3>
+                        <div class="product_card_content_prices">
+                          <span class="product_card_content_prices_price">9 800 ₽</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide search_modal_wrap_body_content_slider_card">
+                    <a href="#" class="product_card">
+                      <div class="product_card_media">
+                        <div class="product_card_media_badge">Sale</div>
+                        <img src="img/product_card-5.jpg" alt="Вязаная хлопковая сумка Verde" width="607" height="806"
+                          loading="lazy">
+                      </div>
+                      <div class="product_card_content">
+                        <h3 class="product_card_content_title">Вязаная сумка Verde</h3>
+                        <div class="product_card_content_prices">
+                          <span class="product_card_content_prices_price">11 900 ₽</span>
+                          <span class="product_card_content_prices_price old">15 400 ₽</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="search_modal_wrap_body_content_action">
+                <a href="#" class="search_modal_wrap_body_content_action_link">
+                  Смотреть все
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modals typ_cancel" id="cancel" data-lenis-prevent>
+  <div class="content">
+    <div class="typ_cancel_wrap">
+      <a class="close-modal" data-modal="#cancel" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path
+            d="M21.1444 8.14646C21.3397 7.95118 21.6562 7.95118 21.8515 8.14646C22.0467 8.34173 22.0467 8.65822 21.8515 8.85349L15.705 15L21.8505 21.1455C22.0452 21.3407 22.0453 21.6574 21.8505 21.8525C21.6554 22.0477 21.3387 22.0474 21.1435 21.8525L14.9989 15.707L8.85441 21.8525C8.65913 22.0474 8.34249 22.0477 8.14738 21.8525C7.95257 21.6574 7.95269 21.3407 8.14738 21.1455L14.2919 15L8.1464 8.85349C7.9512 8.65822 7.9512 8.34173 8.1464 8.14646C8.34164 7.95118 8.65819 7.95118 8.85343 8.14646L14.9989 14.292L21.1444 8.14646Z"
+            fill="black" />
+        </svg>
+      </a>
+      <div class="typ_cancel_wrap_inform">
+        <div class="typ_cancel_wrap_inform_title">
+          Отменить заказ
+        </div>
+        <div class="typ_cancel_wrap_inform_text">
+          <p>
+            Вы уверены, что хотите отменить заказ #345?
+          </p>
+          <p>
+            Отмена заказа необратима
+          </p>
+        </div>
+      </div>
+      <div class="typ_cancel_wrap_cause">
+        <input type="text" name="cancel_reason" id="cancel-reason" placeholder="Укажите причину отмены"
+          aria-label="Укажите причину отмены заказа" autocomplete="off" />
+      </div>
+      <div class="typ_cancel_wrap_action">
+        <button type="button" class="typ_cancel_wrap_action_btn --dark">
+          Отменить заказ
+        </button>
+        <button type="button" class="typ_cancel_wrap_action_btn --gray close-modal" data-modal="#cancel">
+          Не отменять
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 
 </html>

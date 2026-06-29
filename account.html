@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <title><%- title %></title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/src/scss/main-2v.scss" />
+    <link rel="stylesheet" href="/src/scss/main-3v.scss" />
+    <script type="module" src="/src/main.js"></script>
+</head>
+
+<body>
+
+    <%- header %>
+
+        <section class="account_page">
+            <div class="container">
+                <h1 class="account_page_title">
+                    Личный кабинет
+                </h1>
+                <div class="row">
+                    <div class="col-xl-2">
+                        <aside class="account_page_navigation">
+                            <div class="account_page_navigation_list">
+                                <a href="#" class="account_page_navigation_list_link is-active">
+                                    <span class="account_page_navigation_list_link_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M14.6247 7.69165H5.37467C4.9658 7.69165 4.57367 7.85408 4.28455 8.14319C3.99543 8.43231 3.83301 8.82444 3.83301 9.23332V14.6267C3.83345 15.4441 4.15849 16.2279 4.73668 16.8058C5.31487 17.3837 6.09888 17.7083 6.91634 17.7083H13.083C13.9005 17.7083 14.6845 17.3837 15.2627 16.8058C15.8409 16.2279 16.1659 15.4441 16.1663 14.6267V9.23332C16.1663 8.82444 16.0039 8.43231 15.7148 8.14319C15.4257 7.85408 15.0335 7.69165 14.6247 7.69165Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path
+                                                d="M13.8538 9.62752V6.15086C13.8554 5.38803 13.6304 4.64192 13.2072 4.0072C12.7841 3.37249 12.1819 2.87778 11.4772 2.58586C10.8911 2.34306 10.2542 2.2486 9.62293 2.31085C8.99164 2.37311 8.38545 2.59016 7.85812 2.94276C7.33078 3.29536 6.89859 3.77261 6.59985 4.33222C6.30111 4.89183 6.14505 5.5165 6.14551 6.15086V9.62752"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Мои кабинет
+                                </a>
+                                <a href="#" class="account_page_navigation_list_link">
+                                    <span class="account_page_navigation_list_link_icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 20 20" fill="none">
+                                            <path
+                                                d="M4 17V16.125C4 14.5005 4.63214 12.9426 5.75736 11.794C6.88258 10.6453 8.4087 10 10 10M10 10C11.5913 10 13.1174 10.6453 14.2426 11.794C15.3679 12.9426 16 14.5005 16 16.125V17M10 10C10.9093 10 11.7814 9.63125 12.4244 8.97487C13.0673 8.3185 13.4286 7.42826 13.4286 6.5C13.4286 5.57174 13.0673 4.6815 12.4244 4.02513C11.7814 3.36875 10.9093 3 10 3C9.09069 3 8.21862 3.36875 7.57563 4.02513C6.93265 4.6815 6.57143 5.57174 6.57143 6.5C6.57143 7.42826 6.93265 8.3185 7.57563 8.97487C8.21862 9.63125 9.09069 10 10 10Z"
+                                                stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    Мой заказы
+                                </a>
+                            </div>
+                            <a href="#" class="account_page_navigation_link">
+                                <span class="account_page_navigation_link_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+                                        fill="none">
+                                        <rect width="20" height="20" />
+                                        <path
+                                            d="M10 7.375L12.625 10L10 12.625M12.625 10H3M14.2002 3C15.1803 3 15.6696 3 16.044 3.19074C16.3733 3.35852 16.6417 3.62604 16.8094 3.95532C17 4.3293 17 4.81912 17 5.7973V14.2031C17 15.1813 17 15.6704 16.8094 16.0444C16.6417 16.3737 16.3733 16.6417 16.044 16.8094C15.67 17 15.1809 17 14.2027 17"
+                                            stroke="#000" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                                Выйти из аккаунта
+                            </a>
+                        </aside>
+                    </div>
+                    <div class="offset-xl-1 col-xl-9">
+                        <div class="account_page_panel">
+                            <div class="account_page_panel_title">
+                                Добро пожаловать, Кристина!
+                            </div>
+                            <div class="account_page_panel_content">
+                                <div class="account_page_panel_content_action">
+                                    <a href="#" class="account_page_panel_content_action_link">
+                                        <span class="account_page_panel_content_action_link_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M3 3.12508C3 2.29626 3.32924 1.50138 3.91529 0.915316C4.50134 0.329249 5.2962 0 6.125 0H14.875C15.7038 0 16.4987 0.329249 17.0847 0.915316C17.6708 1.50138 18 2.29626 18 3.12508V19.3755C17.9999 19.4908 17.9679 19.6037 17.9077 19.7019C17.8474 19.8001 17.7611 19.8798 17.6584 19.932C17.5557 19.9843 17.4406 20.0071 17.3257 19.9981C17.2108 19.989 17.1007 19.9483 17.0075 19.8805L10.5 15.1479L3.9925 19.8805C3.89929 19.9483 3.78917 19.989 3.67429 19.9981C3.55942 20.0071 3.44427 19.9843 3.34157 19.932C3.23887 19.8798 3.15261 19.8001 3.09233 19.7019C3.03205 19.6037 3.0001 19.4908 3 19.3755V3.12508ZM6.125 1.25003C5.62772 1.25003 5.15081 1.44758 4.79917 1.79922C4.44754 2.15086 4.25 2.62779 4.25 3.12508V18.148L10.1325 13.8704C10.2393 13.7927 10.368 13.7509 10.5 13.7509C10.632 13.7509 10.7607 13.7927 10.8675 13.8704L16.75 18.148V3.12508C16.75 2.62779 16.5525 2.15086 16.2008 1.79922C15.8492 1.44758 15.3723 1.25003 14.875 1.25003H6.125Z"
+                                                    fill="black" />
+                                            </svg>
+                                        </span>
+                                        <span class="account_page_panel_content_action_link_inform">
+                                            <span class="account_page_panel_content_action_link_inform_title">
+                                                Мое избранное
+                                            </span>
+                                            <span class="account_page_panel_content_action_link_inform_text">
+                                                6 товаров
+                                            </span>
+                                        </span>
+                                    </a>
+                                    <a href="#" class="account_page_panel_content_action_link">
+                                        <span class="account_page_panel_content_action_link_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_1370_147)">
+                                                    <path
+                                                        d="M9.49805 0.0253714C10.3406 -0.0585341 11.1907 0.0684079 11.9727 0.395489C12.9131 0.788851 13.7163 1.45537 14.2803 2.30955C14.8441 3.16365 15.1446 4.16755 15.1426 5.19334V6.74217H15.7197C16.3258 6.74224 16.9065 6.98532 17.334 7.41697C17.7613 7.84853 18.0009 8.43323 18.001 9.04197V15.7773C18.0003 16.8963 17.5592 17.9696 16.7744 18.7617C15.9895 19.5539 14.9248 19.9999 13.8135 20H6.1875C5.07613 19.9999 4.01053 19.5539 3.22559 18.7617C2.44101 17.9696 2.00064 16.8961 2 15.7773V9.04197C2.00007 8.43323 2.23963 7.84853 2.66699 7.41697C3.0945 6.98533 3.67511 6.74219 4.28125 6.74217H4.86035V5.19334C4.85977 4.34024 5.06779 3.49999 5.46582 2.74705C5.86389 1.99407 6.44018 1.35187 7.14355 0.876934C7.84692 0.402012 8.65546 0.109311 9.49805 0.0253714ZM4.28125 7.49217C3.87634 7.49219 3.48764 7.65502 3.2002 7.94529C2.91268 8.23565 2.75007 8.6298 2.75 9.04197V15.7763L2.75391 15.9492C2.79658 16.8088 3.15404 17.624 3.75879 18.2344C4.40366 18.8852 5.27739 19.2499 6.1875 19.25H13.8135C14.7236 19.2499 15.5973 18.8852 16.2422 18.2344C16.8871 17.5835 17.2503 16.6996 17.251 15.7773V9.04197C17.2509 8.62984 17.0882 8.23564 16.8008 7.94529C16.5134 7.65506 16.1246 7.49224 15.7197 7.49217H15.1426V9.53416C15.1426 9.74111 14.9745 9.9089 14.7676 9.90916C14.5605 9.90916 14.3926 9.74127 14.3926 9.53416V7.49217H5.61035V9.53416C5.61035 9.74127 5.44246 9.90916 5.23535 9.90916C5.02825 9.90916 4.86035 9.74127 4.86035 9.53416V7.49217H4.28125ZM11.6836 1.08787C11.0163 0.808677 10.2909 0.699904 9.57227 0.771465C8.85376 0.843061 8.16316 1.09245 7.5625 1.49803C6.96189 1.90364 6.46959 2.4532 6.12891 3.09764C5.78816 3.74222 5.60983 4.46226 5.61035 5.19334V6.74217H14.3926V5.19236C14.3944 4.31334 14.1368 3.45345 13.6543 2.72264C13.1719 1.99209 12.4858 1.42345 11.6836 1.08787Z"
+                                                        fill="black" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_1370_147">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        <span class="account_page_panel_content_action_link_inform">
+                                            <span class="account_page_panel_content_action_link_inform_title">
+                                                Мои заказы
+                                            </span>
+                                            <span class="account_page_panel_content_action_link_inform_text">
+                                                2 заказа
+                                            </span>
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="account_page_panel_content_order">
+                                    <div class="account_page_panel_content_order_title">
+                                        Последние заказы
+                                    </div>
+                                    <div class="account_page_panel_content_order_stub" style="display: none;">
+                                        У вас пока нет заказов
+                                    </div>
+                                    <div class="account_page_panel_content_order_card">
+                                        <div class="account_page_panel_content_order_card_top">
+                                            <div class="account_page_panel_content_order_card_top_inform">
+                                                <div class="account_page_panel_content_order_card_top_inform_gallery">
+                                                    <img src="img/product_card-2.jpg" alt="Кашемировый джемпер"
+                                                        width="88" height="110"
+                                                        loading="lazy">
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_top_inform_list">
+                                                    <a href="#"
+                                                        class="account_page_panel_content_order_card_top_inform_list_title">
+                                                        Заказ №345
+                                                    </a>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_text">
+                                                        2 товара
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_top_inform_list_status unpaid">
+                                                        ожидает оплаты
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_top_action">
+                                                <div class="account_page_panel_content_order_card_top_action_cost">
+                                                    89 095 руб
+                                                </div>
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_top_action_pay">
+                                                    Оплатить
+                                                </button>
+                                                <span class="account_page_panel_content_order_card_top_action_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                        viewBox="0 0 16 16" fill="none">
+                                                        <path
+                                                            d="M7.2 10.9333C7.6 11.4667 8.4 11.4667 8.8 10.9333L12.8 5.6C13.2944 4.94076 12.824 4 12 4H4C3.17595 4 2.70557 4.94076 3.2 5.6L7.2 10.9333Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="account_page_panel_content_order_card_bottom">
+                                            <div class="account_page_panel_content_order_card_bottom_title">
+                                                Данные о заказе
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_products">
+                                                <div class="account_page_panel_content_order_card_bottom_products_item">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_media">
+                                                        <img src="img/product_card-2.jpg" alt="Кашемировый джемпер"
+                                                            width="88" height="110" loading="lazy">
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_content">
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_title">
+                                                            Кашемировый джемпер
+                                                        </div>
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_meta">
+                                                            <span>Размер: M</span>
+                                                            <span>Цвет: Серый</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_price">
+                                                        1 x 64 800 руб
+                                                    </div>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_products_item">
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_media">
+                                                        <img src="img/product_card-3.jpg" alt="Юбка" width="88"
+                                                            height="110" loading="lazy">
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_content">
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_title">
+                                                            Юбка
+                                                        </div>
+                                                        <div
+                                                            class="account_page_panel_content_order_card_bottom_products_item_content_meta">
+                                                            <span>Размер: L</span>
+                                                            <span>Цвет: Черный</span>
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="account_page_panel_content_order_card_bottom_products_item_price">
+                                                        1 x 22 400 руб
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_summary">
+                                                <div class="account_page_panel_content_order_card_bottom_summary_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Доставка
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        1895 руб
+                                                    </span>
+                                                </div>
+                                                <div
+                                                    class="account_page_panel_content_order_card_bottom_summary_row total">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_label">
+                                                        Итого
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_summary_row_value">
+                                                        89 095 руб
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_details">
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Имя получателя
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        Кристина Стаканова
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Email
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        chrisoveroff@gmail.com
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Статус
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        принят, ожидает оплаты
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Служба доставки
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        СДЭК, посылка дверь-дверь
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Номер отправления
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value is-copy">
+                                                        <span>726382817380</span>
+                                                        <button type="button"
+                                                            class="account_page_panel_content_order_card_bottom_details_row_copy"
+                                                            aria-label="Скопировать номер отправления">
+                                                            <span
+                                                                class="account_page_panel_content_order_card_bottom_details_row_copy_message">
+                                                                Номер отправления скопирован
+                                                            </span>
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                                height="20" viewBox="0 0 20 20" fill="none">
+                                                                <path
+                                                                    d="M16.626 5.38867C16.8331 5.38871 17.001 5.55659 17.001 5.76367V15.9297C17.0009 16.4756 16.789 17.0011 16.4092 17.3896C16.029 17.7786 15.5112 17.998 14.9697 17.998H8.34473C7.80326 17.998 7.28551 17.7786 6.90527 17.3896C6.52542 17.0011 6.3136 16.4756 6.31348 15.9297V5.76367C6.31348 5.55657 6.48137 5.38867 6.68848 5.38867H16.626ZM7.06348 15.9297C7.0636 16.2821 7.20032 16.6186 7.44141 16.8652C7.68237 17.1117 8.0077 17.248 8.34473 17.248H14.9697C15.3067 17.248 15.6321 17.1117 15.873 16.8652C16.1141 16.6186 16.2509 16.2821 16.251 15.9297V6.13867H7.06348V15.9297ZM13.3125 2C13.5196 2.00004 13.6875 2.16792 13.6875 2.375C13.6875 2.58208 13.5196 2.74996 13.3125 2.75H3.75V13.3877C3.74999 13.5948 3.5821 13.7627 3.375 13.7627C3.1679 13.7627 3.00001 13.5948 3 13.3877V2.375C3 2.16789 3.16789 2 3.375 2H13.3125Z"
+                                                                    fill="black" />
+                                                            </svg>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="account_page_panel_content_order_card_bottom_details_row">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_label">
+                                                        Дата заказа
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_details_row_value">
+                                                        04.06.2026
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_order_card_bottom_control">
+                                                <button type="button"
+                                                    class="account_page_panel_content_order_card_bottom_control_cancel open-modal"
+                                                    data-modal="#cancel">
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_icon">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M16.1444 3.14646C16.3397 2.95118 16.6562 2.95118 16.8515 3.14646C17.0467 3.34173 17.0467 3.65822 16.8515 3.85349L10.705 9.99998L16.8505 16.1455C17.0452 16.3407 17.0453 16.6574 16.8505 16.8525C16.6554 17.0477 16.3387 17.0474 16.1435 16.8525L9.99894 10.707L3.85441 16.8525C3.65913 17.0474 3.34249 17.0477 3.14738 16.8525C2.95257 16.6574 2.95269 16.3407 3.14738 16.1455L9.29191 9.99998L3.1464 3.85349C2.9512 3.65822 2.9512 3.34173 3.1464 3.14646C3.34164 2.95118 3.65819 2.95118 3.85343 3.14646L9.99894 9.29197L16.1444 3.14646Z"
+                                                                fill="#979797" />
+                                                        </svg>
+                                                    </span>
+                                                    <span
+                                                        class="account_page_panel_content_order_card_bottom_control_cancel_text">
+                                                        Отменить заказ
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="account_page_panel_content_personal">
+                                    <div class="account_page_panel_content_personal_title">
+                                        Личные данные
+                                    </div>
+                                    <form action="" method="get" class="account_page_panel_content_personal_form">
+                                        <div class="account_page_panel_content_personal_form_list">
+                                            <div class="account_page_panel_content_personal_form_list_item">
+                                                <label for="personal-name"
+                                                    class="account_page_panel_content_personal_form_list_item_label">
+                                                    Имя и Фамилия
+                                                </label>
+                                                <div class="account_page_panel_content_personal_form_list_item_field">
+                                                    <input type="text" name="personal_name" id="personal-name"
+                                                        value="Кристина Стаканова" readonly
+                                                        class="account_page_panel_content_personal_form_list_item_input">
+                                                    <span
+                                                        class="account_page_panel_content_personal_form_list_item_edit"
+                                                        aria-hidden="true">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M3.01246 15.8905L3.47236 12.741C3.50039 12.5351 3.59434 12.3437 3.74133 12.1961L12.6522 3.28412C12.7675 3.16725 12.9111 3.0821 13.0691 3.03689C13.227 2.99168 13.394 2.98796 13.5538 3.02608C14.3719 3.25193 15.1133 3.69492 15.6995 4.30798C16.3116 4.89743 16.7521 5.64178 16.9739 6.46162C17.0121 6.62124 17.0083 6.788 16.9631 6.94575C16.9178 7.10351 16.8325 7.24693 16.7155 7.36213L7.79482 16.2628C7.64686 16.4092 7.45502 16.5033 7.24855 16.5306L4.09592 16.99C3.94699 17.0117 3.79505 16.998 3.6524 16.9501C3.50975 16.9022 3.38042 16.8214 3.27489 16.7142C3.16936 16.607 3.0906 16.4765 3.04501 16.3333C2.99941 16.19 2.98826 16.0381 3.01246 15.8897M10.9664 4.97919L15.0297 9.03753"
+                                                                stroke="black" stroke-width="0.75"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_personal_form_list_item">
+                                                <label for="personal-email"
+                                                    class="account_page_panel_content_personal_form_list_item_label">
+                                                    Email
+                                                </label>
+                                                <div class="account_page_panel_content_personal_form_list_item_field">
+                                                    <input type="email" name="personal_email" id="personal-email"
+                                                        value="chrisoveroff@gmail.com" readonly
+                                                        class="account_page_panel_content_personal_form_list_item_input">
+                                                    <span
+                                                        class="account_page_panel_content_personal_form_list_item_edit"
+                                                        aria-hidden="true">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M3.01246 15.8905L3.47236 12.741C3.50039 12.5351 3.59434 12.3437 3.74133 12.1961L12.6522 3.28412C12.7675 3.16725 12.9111 3.0821 13.0691 3.03689C13.227 2.99168 13.394 2.98796 13.5538 3.02608C14.3719 3.25193 15.1133 3.69492 15.6995 4.30798C16.3116 4.89743 16.7521 5.64178 16.9739 6.46162C17.0121 6.62124 17.0083 6.788 16.9631 6.94575C16.9178 7.10351 16.8325 7.24693 16.7155 7.36213L7.79482 16.2628C7.64686 16.4092 7.45502 16.5033 7.24855 16.5306L4.09592 16.99C3.94699 17.0117 3.79505 16.998 3.6524 16.9501C3.50975 16.9022 3.38042 16.8214 3.27489 16.7142C3.16936 16.607 3.0906 16.4765 3.04501 16.3333C2.99941 16.19 2.98826 16.0381 3.01246 15.8897M10.9664 4.97919L15.0297 9.03753"
+                                                                stroke="black" stroke-width="0.75"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_personal_form_list_item">
+                                                <label for="personal-phone"
+                                                    class="account_page_panel_content_personal_form_list_item_label">
+                                                    Телефон
+                                                </label>
+                                                <div class="account_page_panel_content_personal_form_list_item_field">
+                                                    <input type="tel" name="personal_phone" id="personal-phone"
+                                                        value="+7 373 428 02 10" readonly
+                                                        class="account_page_panel_content_personal_form_list_item_input">
+                                                    <span
+                                                        class="account_page_panel_content_personal_form_list_item_edit"
+                                                        aria-hidden="true">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M3.01246 15.8905L3.47236 12.741C3.50039 12.5351 3.59434 12.3437 3.74133 12.1961L12.6522 3.28412C12.7675 3.16725 12.9111 3.0821 13.0691 3.03689C13.227 2.99168 13.394 2.98796 13.5538 3.02608C14.3719 3.25193 15.1133 3.69492 15.6995 4.30798C16.3116 4.89743 16.7521 5.64178 16.9739 6.46162C17.0121 6.62124 17.0083 6.788 16.9631 6.94575C16.9178 7.10351 16.8325 7.24693 16.7155 7.36213L7.79482 16.2628C7.64686 16.4092 7.45502 16.5033 7.24855 16.5306L4.09592 16.99C3.94699 17.0117 3.79505 16.998 3.6524 16.9501C3.50975 16.9022 3.38042 16.8214 3.27489 16.7142C3.16936 16.607 3.0906 16.4765 3.04501 16.3333C2.99941 16.19 2.98826 16.0381 3.01246 15.8897M10.9664 4.97919L15.0297 9.03753"
+                                                                stroke="black" stroke-width="0.75"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="account_page_panel_content_personal_form_list_item">
+                                                <label for="personal-password"
+                                                    class="account_page_panel_content_personal_form_list_item_label">
+                                                    Пароль
+                                                </label>
+                                                <div class="account_page_panel_content_personal_form_list_item_field">
+                                                    <input type="password" name="personal_password"
+                                                        id="personal-password" value="12345678912345" readonly
+                                                        class="account_page_panel_content_personal_form_list_item_input">
+                                                    <span
+                                                        class="account_page_panel_content_personal_form_list_item_edit"
+                                                        aria-hidden="true">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                            viewBox="0 0 20 20" fill="none">
+                                                            <path
+                                                                d="M3.01246 15.8905L3.47236 12.741C3.50039 12.5351 3.59434 12.3437 3.74133 12.1961L12.6522 3.28412C12.7675 3.16725 12.9111 3.0821 13.0691 3.03689C13.227 2.99168 13.394 2.98796 13.5538 3.02608C14.3719 3.25193 15.1133 3.69492 15.6995 4.30798C16.3116 4.89743 16.7521 5.64178 16.9739 6.46162C17.0121 6.62124 17.0083 6.788 16.9631 6.94575C16.9178 7.10351 16.8325 7.24693 16.7155 7.36213L7.79482 16.2628C7.64686 16.4092 7.45502 16.5033 7.24855 16.5306L4.09592 16.99C3.94699 17.0117 3.79505 16.998 3.6524 16.9501C3.50975 16.9022 3.38042 16.8214 3.27489 16.7142C3.16936 16.607 3.0906 16.4765 3.04501 16.3333C2.99941 16.19 2.98826 16.0381 3.01246 15.8897M10.9664 4.97919L15.0297 9.03753"
+                                                                stroke="black" stroke-width="0.75"
+                                                                stroke-linecap="round" stroke-linejoin="round" />
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="account_page_panel_content_personal_form_control">
+                                            <button type="button"
+                                                class="account_page_panel_content_personal_form_control_edit">
+                                                <span
+                                                    class="account_page_panel_content_personal_form_control_edit_icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                        viewBox="0 0 20 20" fill="none">
+                                                        <path
+                                                            d="M3.01246 15.8905L3.47236 12.741C3.50039 12.5351 3.59434 12.3437 3.74133 12.1961L12.6522 3.28412C12.7675 3.16725 12.9111 3.0821 13.0691 3.03689C13.227 2.99168 13.394 2.98796 13.5538 3.02608C14.3719 3.25193 15.1133 3.69492 15.6995 4.30798C16.3116 4.89743 16.7521 5.64178 16.9739 6.46162C17.0121 6.62124 17.0083 6.788 16.9631 6.94575C16.9178 7.10351 16.8325 7.24693 16.7155 7.36213L7.79482 16.2628C7.64686 16.4092 7.45502 16.5033 7.24855 16.5306L4.09592 16.99C3.94699 17.0117 3.79505 16.998 3.6524 16.9501C3.50975 16.9022 3.38042 16.8214 3.27489 16.7142C3.16936 16.607 3.0906 16.4765 3.04501 16.3333C2.99941 16.19 2.98826 16.0381 3.01246 15.8897M10.9664 4.97919L15.0297 9.03753"
+                                                            stroke="black" stroke-width="0.75" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                                <span
+                                                    class="account_page_panel_content_personal_form_control_edit_text">
+                                                    Редактировать
+                                                </span>
+                                            </button>
+                                            <button type="submit"
+                                                class="account_page_panel_content_personal_form_control_save">
+                                                Сохранить изменения
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="account_page_panel_content_out"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <%- footer %>

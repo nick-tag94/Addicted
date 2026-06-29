@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import { createHtmlPlugin } from "vite-plugin-html";
 import fs from "fs";
+import { compile } from "sass";
 
 const readFile = (filePath) =>
   fs.readFileSync(resolve(__dirname, filePath), "utf-8");
@@ -134,28 +135,46 @@ export default defineConfig(({ command }) => {
             force: true,
           });
 
-          const basketCssPath = resolve(__dirname, "build/assets/basket.css");
+          const buildDir = resolve(__dirname, "build");
+          const mainCssPath = resolve(__dirname, "build/assets/main.css");
           const main2vCssPath = resolve(__dirname, "build/assets/main-2v.css");
-          const basketHtmlPath = resolve(__dirname, "build/basket.html");
+          const main3vCssPath = resolve(__dirname, "build/assets/main-3v.css");
+          const builtHtmlFiles = fs
+            .readdirSync(buildDir)
+            .filter((fileName) => fileName.endsWith(".html"));
 
-          if (fs.existsSync(basketCssPath)) {
-            fs.renameSync(basketCssPath, main2vCssPath);
-          }
+          const writeCompiledStyle = (sourceFilePath, outputFilePath) => {
+            const compiledStyle = compile(sourceFilePath, {
+              style: "compressed",
+              loadPaths: [resolve(__dirname, "src/scss")],
+            });
 
-          normalizeBuiltCssAssetPaths(main2vCssPath);
-          normalizeBuiltCssAssetPaths(
-            resolve(__dirname, "build/assets/main.css"),
+            fs.writeFileSync(outputFilePath, compiledStyle.css);
+          };
+
+          writeCompiledStyle(
+            resolve(__dirname, "src/scss/main-2v.scss"),
+            main2vCssPath,
+          );
+          writeCompiledStyle(
+            resolve(__dirname, "src/scss/main-3v.scss"),
+            main3vCssPath,
           );
 
-          if (fs.existsSync(basketHtmlPath)) {
-            const basketHtml = fs.readFileSync(basketHtmlPath, "utf-8");
-            const updatedBasketHtml = basketHtml.replaceAll(
-              "/assets/basket.css",
-              "/assets/main-2v.css",
+          normalizeBuiltCssAssetPaths(mainCssPath);
+          normalizeBuiltCssAssetPaths(main2vCssPath);
+          normalizeBuiltCssAssetPaths(main3vCssPath);
+
+          builtHtmlFiles.forEach((fileName) => {
+            const filePath = resolve(buildDir, fileName);
+            const html = fs.readFileSync(filePath, "utf-8");
+            const updatedHtml = html.replace(
+              '<link rel="stylesheet" crossorigin href="/assets/main.css">',
+              '<link rel="stylesheet" crossorigin href="/assets/main.css"><link rel="stylesheet" crossorigin href="/assets/main-2v.css"><link rel="stylesheet" crossorigin href="/assets/main-3v.css">',
             );
 
-            fs.writeFileSync(basketHtmlPath, updatedBasketHtml);
-          }
+            fs.writeFileSync(filePath, updatedHtml);
+          });
         },
       },
       sharedComponentsPlugin(componentAssetBase),
@@ -311,6 +330,78 @@ export default defineConfig(({ command }) => {
             injectOptions: {
               data: {
                 title: "Addicted - Магазины",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "login",
+            template: "login.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Вход в аккаунт",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "registration",
+            template: "registration.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Регистрация",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "password-recovery",
+            template: "password-recovery.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Восстановление пароля",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "404",
+            template: "404.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - 404",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "account",
+            template: "account.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Мой кабинет",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+                    {
+            filename: "orders",
+            template: "orders.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Мои заказы",
                 assetBase: basePath,
                 header: sharedComponentTokens.header,
                 footer: sharedComponentTokens.footer,
