@@ -3331,7 +3331,12 @@ const initAccountOrderCards = () => {
   const orderCards = document.querySelectorAll(
     ".account_page_panel_content_order_card",
   );
-  if (!orderCards.length || !window.gsap) return;
+  if (!orderCards.length) return;
+
+  const isPaymentPage = Boolean(
+    document.querySelector(".account_page.payment_page"),
+  );
+  const shouldInitAccordion = !isPaymentPage && Boolean(window.gsap);
 
   const SLIDE_DURATION = 0.4;
   const COPY_MESSAGE_DURATION = 2000;
@@ -3381,65 +3386,65 @@ const initAccountOrderCards = () => {
     const bottomEl = cardEl.querySelector(
       ".account_page_panel_content_order_card_bottom",
     );
-    if (!(bottomEl instanceof HTMLElement)) return;
+    if (shouldInitAccordion && bottomEl instanceof HTMLElement) {
+      const expandedMarginTop =
+        parseFloat(window.getComputedStyle(bottomEl).marginTop) || 0;
 
-    const expandedMarginTop =
-      parseFloat(window.getComputedStyle(bottomEl).marginTop) || 0;
-
-    if (cardEl.classList.contains("is-open")) {
-      setOpenedState(cardEl, bottomEl);
-      gsap.set(bottomEl, {
-        marginTop: expandedMarginTop,
-      });
-    } else {
-      setClosedState(cardEl, bottomEl);
-      gsap.set(bottomEl, {
-        marginTop: 0,
-      });
-    }
-
-    cardEl.addEventListener("click", (event) => {
-      const target = event.target;
-      if (!(target instanceof Element)) return;
-
-      if (
-        target.closest(
-          "a, button, input, textarea, select, label, .open-modal, .account_page_panel_content_order_card_bottom_details_row_copy",
-        )
-      ) {
-        return;
+      if (cardEl.classList.contains("is-open")) {
+        setOpenedState(cardEl, bottomEl);
+        gsap.set(bottomEl, {
+          marginTop: expandedMarginTop,
+        });
+      } else {
+        setClosedState(cardEl, bottomEl);
+        gsap.set(bottomEl, {
+          marginTop: 0,
+        });
       }
 
-      const isOpen = cardEl.classList.contains("is-open");
-      gsap.killTweensOf(bottomEl);
+      cardEl.addEventListener("click", (event) => {
+        const target = event.target;
+        if (!(target instanceof Element)) return;
 
-      if (isOpen) {
-        cardEl.classList.remove("is-open");
+        if (
+          target.closest(
+            "a, button, input, textarea, select, label, .open-modal, .account_page_panel_content_order_card_bottom_details_row_copy",
+          )
+        ) {
+          return;
+        }
+
+        const isOpen = cardEl.classList.contains("is-open");
+        gsap.killTweensOf(bottomEl);
+
+        if (isOpen) {
+          cardEl.classList.remove("is-open");
+          gsap.to(bottomEl, {
+            height: 0,
+            autoAlpha: 0,
+            marginTop: 0,
+            duration: SLIDE_DURATION,
+            ease: "power2.out",
+            overwrite: "auto",
+          });
+          return;
+        }
+
+        cardEl.classList.add("is-open");
+        gsap.set(bottomEl, {
+          display: "block",
+          overflow: "hidden",
+        });
         gsap.to(bottomEl, {
-          height: 0,
-          autoAlpha: 0,
-          marginTop: 0,
+          height: "auto",
+          autoAlpha: 1,
+          marginTop: expandedMarginTop,
           duration: SLIDE_DURATION,
           ease: "power2.out",
           overwrite: "auto",
         });
-        return;
-      }
-
-      cardEl.classList.add("is-open");
-      gsap.set(bottomEl, {
-        display: "block",
-        overflow: "hidden",
       });
-      gsap.to(bottomEl, {
-        height: "auto",
-        autoAlpha: 1,
-        marginTop: expandedMarginTop,
-        duration: SLIDE_DURATION,
-        ease: "power2.out",
-        overwrite: "auto",
-      });
-    });
+    }
 
     const copyButton = cardEl.querySelector(
       ".account_page_panel_content_order_card_bottom_details_row_copy",
