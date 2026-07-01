@@ -612,6 +612,7 @@ const initSearchPanelToggle = () => {
       closeHeaderInteractivePanels("search");
       modal.classList.add("active");
       setPageScrollLocked("search-modal", true);
+      document.dispatchEvent(new CustomEvent("searchmodalopen"));
       return;
     }
 
@@ -1071,6 +1072,7 @@ const initSearchModalSlider = () => {
   const section = document.querySelector(".search_modal_wrap_body");
   if (!section || section.dataset.sliderInited === "true") return;
 
+  const modalEl = section.closest(".search_modal");
   const informEl = section.querySelector(".search_modal_wrap_body_inform");
   const contentColumnEl = section.querySelector(".search_modal_wrap_body_content");
   const sliderEl = section.querySelector(
@@ -1099,6 +1101,14 @@ const initSearchModalSlider = () => {
 
   const syncInformNavigationOffset = () => {
     if (!informEl) return;
+
+    if (
+      modalEl instanceof HTMLElement &&
+      (!modalEl.classList.contains("active") ||
+        window.getComputedStyle(modalEl).visibility === "hidden")
+    ) {
+      return;
+    }
 
     if (window.innerWidth <= 767) {
       informEl.style.paddingBottom = "";
@@ -1169,6 +1179,17 @@ const initSearchModalSlider = () => {
     });
   };
 
+  const scheduleOpenSyncPasses = () => {
+    const syncDelays = [0, 50, 150, 300];
+
+    syncDelays.forEach((delay) => {
+      window.setTimeout(() => {
+        swiper.update();
+        requestInformNavigationOffsetSync();
+      }, delay);
+    });
+  };
+
   if (sliderEl.dataset.navigationOffsetInited !== "true") {
     sliderEl.dataset.navigationOffsetInited = "true";
 
@@ -1218,7 +1239,7 @@ const initSearchModalSlider = () => {
     sliderEl.classList.toggle("is-active", isShiftedLeft);
   };
 
-  new Swiper(sliderEl, {
+  const swiper = new Swiper(sliderEl, {
     modules: [Navigation, Scrollbar],
     speed: 800,
     watchOverflow: true,
@@ -1285,6 +1306,47 @@ const initSearchModalSlider = () => {
       },
     },
   });
+
+  const handleSearchModalOpen = () => {
+    scheduleOpenSyncPasses();
+  };
+
+  document.addEventListener("searchmodalopen", handleSearchModalOpen);
+
+  if (modalEl instanceof HTMLElement) {
+    modalEl.addEventListener("transitionend", (event) => {
+      if (event.target !== modalEl || !modalEl.classList.contains("active")) {
+        return;
+      }
+
+      swiper.update();
+      requestInformNavigationOffsetSync();
+    });
+  }
+
+  const observedEls = [
+    sliderEl,
+    contentColumnEl,
+    section.querySelector(".search_modal_wrap_body_content_action"),
+  ].filter(Boolean);
+
+  if (
+    typeof ResizeObserver !== "undefined" &&
+    observedEls.length &&
+    section.dataset.navigationOffsetResizeObserved !== "true"
+  ) {
+    section.dataset.navigationOffsetResizeObserved = "true";
+
+    const resizeObserver = new ResizeObserver(() => {
+      requestInformNavigationOffsetSync();
+    });
+
+    observedEls.forEach((element) => {
+      if (element instanceof HTMLElement) {
+        resizeObserver.observe(element);
+      }
+    });
+  }
 
   requestInformNavigationOffsetSync();
 };
