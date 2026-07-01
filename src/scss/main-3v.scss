@@ -1100,10 +1100,6 @@
           margin-top: fm(20, 10);
           overflow: hidden;
 
-          @include mobile {
-            overflow: visible;
-          }
-
           &_card {
             @include mobile {
               max-width: 169px;
