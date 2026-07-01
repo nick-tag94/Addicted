@@ -396,12 +396,24 @@ export default defineConfig(({ command }) => {
               },
             },
           },
-                    {
+          {
             filename: "orders",
             template: "orders.html",
             injectOptions: {
               data: {
                 title: "Addicted - Мои заказы",
+                assetBase: basePath,
+                header: sharedComponentTokens.header,
+                footer: sharedComponentTokens.footer,
+              },
+            },
+          },
+          {
+            filename: "payment",
+            template: "payment.html",
+            injectOptions: {
+              data: {
+                title: "Addicted - Оплата заказа",
                 assetBase: basePath,
                 header: sharedComponentTokens.header,
                 footer: sharedComponentTokens.footer,
